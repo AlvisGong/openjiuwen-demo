@@ -6,6 +6,8 @@ from constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
 sys.path.insert(0, os.path.dirname(os.path.abspath('__file__')))
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
 
+WEATHER_URL = "http://127.0.0.1:8000/"
+
 from openjiuwen.core.foundation.llm import ModelRequestConfig, ModelClientConfig
 
 model_config = ModelRequestConfig(
@@ -26,36 +28,37 @@ def create_prompt_template():
         dict(role="system", content=system_prompt)
     ]
 
-from openjiuwen.core.foundation.tool import tool
+from openjiuwen.core.foundation.tool import RestfulApiCard, RestfulApi
 
-@tool(
-    name="add",
-    description="本地加法插件",
-    input_params={
-        "type": "object",
-        "properties": {
-            "a": {
-                "type": "integer",
-                "description": "第一个参数"
+def create_tool():
+    weather_card = RestfulApiCard(
+            id="weather_tool",
+            name="WeatherReporter",
+            description="天气查询插件",
+            input_params={
+                "type": "object",
+                "properties": {
+                    "location": {"description": "地点", "type": "string"},
+                    "date": {"description": "日期", "type": "string"},
+                },
+                "required": ["location", "date"],
             },
-            "b": {
-                "type": "integer",
-                "description": "第二个参数"
-            }
-        },
-        "required": ["a", "b"]
-    }
-)
-def add(a: int, b: int) -> int:
-    return a + b 
+            url=WEATHER_URL,
+            headers={},
+            method="GET",
+        )
+    weather_tool = RestfulApi(
+        card=weather_card,
+    )
 
+    return weather_tool
 
 from openjiuwen.core.single_agent import AgentCard, ReActAgentConfig, ReActAgent
 from openjiuwen.core.runner import Runner
 
 agent_card = AgentCard(
         id="react_agent_1234",
-        description="计算器助手",
+        description="天气查询助手",
     )
 prompt_template = create_prompt_template()
 react_agent_config = ReActAgentConfig(
@@ -64,15 +67,15 @@ react_agent_config = ReActAgentConfig(
     prompt_template=prompt_template
 )
 react_agent = ReActAgent(card=agent_card).configure(react_agent_config)
-
-Runner.resource_mgr.add_tool(add)
-react_agent.ability_manager.add(add.card)
+tool = create_tool()
+Runner.resource_mgr.add_tool(tool)
+react_agent.ability_manager.add(tool.card)
 
 import asyncio
 
 async def main():
     result = await Runner.run_agent(agent=react_agent,
-                                    inputs={"query": "使用本地加法插件计算1+1", "conversation_id": "013"})
+                                    inputs={"query": "查询一下beijing 2026-04-01这天的天气", "conversation_id": "013"})
     print(result)
 
 if __name__ == "__main__":
