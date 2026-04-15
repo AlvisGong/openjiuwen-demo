@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath('__file__')))
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
 
 API_BASE = "https://api.modelarts-maas.com/openai/v1";
-API_KEY = "TdjVSA2nqjP8pQRpf-A5YVCSjgLx9FabIBxyN9B5TI7ZdcTMyhSxmzXzzyPr6xEWOylP7SR4BI8OAPsJwQYtfg";
+API_KEY = "****";
 MODEL_NAME = "glm-5";
 MODEL_PROVIDER = "OpenAI";
 WEATHER_URL = "http://127.0.0.1:8000/"
