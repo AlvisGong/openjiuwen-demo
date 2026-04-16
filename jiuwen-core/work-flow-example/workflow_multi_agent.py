@@ -19,6 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common.constant import API_BASE, API_KEY, MODEL_NAME, MODEL_PROVIDER
 
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
+# 设置工作流执行超时时间为 300 秒（默认 60 秒），支持多轮对话
+os.environ.setdefault("WORKFLOW_EXECUTE_TIMEOUT", "300")
 
 # ========== 导入核心组件 ==========
 from openjiuwen.core.workflow import (
