@@ -1,12 +1,10 @@
 import os, sys
-from datetime import datetime
-from constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from common.constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
 
-# 如需把项目根目录加入 PYTHONPATH
-sys.path.insert(0, os.path.dirname(os.path.abspath('__file__')))
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
 
-WEATHER_URL = "http://127.0.0.1:8000/"
+WEATHER_URL = "http://127.0.0.1:8001/"
 
 from openjiuwen.core.foundation.llm import ModelRequestConfig, ModelClientConfig
 

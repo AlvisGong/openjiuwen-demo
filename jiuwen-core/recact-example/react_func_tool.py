@@ -1,9 +1,7 @@
 import os, sys
-from datetime import datetime
-from constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from common.constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
 
-# 如需把项目根目录加入 PYTHONPATH
-sys.path.insert(0, os.path.dirname(os.path.abspath('__file__')))
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
 
 from openjiuwen.core.foundation.llm import ModelRequestConfig, ModelClientConfig

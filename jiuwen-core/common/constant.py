@@ -1,4 +1,4 @@
 API_BASE = "https://api.modelarts-maas.com/openai/v1";
-API_KEY = "*******";
+API_KEY = "**********************";
 MODEL_NAME = "glm-5";
 MODEL_PROVIDER = "OpenAI";
