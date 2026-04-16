@@ -1,4 +1,11 @@
-# 开发者自定义实现部署weather MCP服务，再创建天气查询插件的MCPTool实例。
+# coding: utf-8
+"""
+MCP服务调用示例
+
+运行前请确保：
+1. 已安装 openjiuwen 包
+2. 启动MCP天气获取服务，运行 python tools/mcp_server.py
+"""
 import asyncio
 import sys
 import io

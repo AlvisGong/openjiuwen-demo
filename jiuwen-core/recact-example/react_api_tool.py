@@ -1,10 +1,19 @@
+# coding: utf-8
+"""
+react agent 调用 API Server 工具示例
+
+运行前请确保：
+1. 已安装 openjiuwen 包
+2. 配置正确的 API_BASE, API_KEY, MODEL_NAME, MODEL_PROVIDER
+3. 启动天气获取服务，运行 python tools/weather_server.py
+"""
 import os, sys
 sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common.constant import API_BASE,API_KEY,MODEL_NAME,MODEL_PROVIDER
 
 os.environ.setdefault("LLM_SSL_VERIFY", "false")
 
-WEATHER_URL = "http://127.0.0.1:8001/"
+WEATHER_URL = "http://127.0.0.1:8000/"
 
 from openjiuwen.core.foundation.llm import ModelRequestConfig, ModelClientConfig
 

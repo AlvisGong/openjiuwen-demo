@@ -1,3 +1,8 @@
+# coding: utf-8
+"""
+Funciton工具示例
+
+"""
 from openjiuwen.core.foundation.tool import tool
 
 @tool(

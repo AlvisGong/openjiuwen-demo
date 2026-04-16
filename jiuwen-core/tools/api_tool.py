@@ -1,3 +1,11 @@
+# coding: utf-8
+"""
+API Server 工具示例
+
+运行前请确保：
+1. 已安装 openjiuwen 包
+2. 启动天气获取服务，运行 python tools/weather_server.py
+"""
 from openjiuwen.core.foundation.tool import RestfulApi, RestfulApiCard
 import asyncio
 
