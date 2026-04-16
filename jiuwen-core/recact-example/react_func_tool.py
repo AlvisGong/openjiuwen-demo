@@ -49,6 +49,68 @@ from openjiuwen.core.foundation.tool import tool
 def add(a: int, b: int) -> int:
     return a + b 
 
+@tool(
+    name="subtract",
+    description="本地减法插件",
+    input_params={
+        "type": "object",
+        "properties": {
+            "a": {
+                "type": "integer",
+                "description": "第一个参数"
+            },
+            "b": {
+                "type": "integer",
+                "description": "第二个参数"
+            }
+        },
+        "required": ["a", "b"]
+    }
+)
+def subtract(a: int, b: int) -> int:
+    return a - b 
+
+@tool(
+    name="multiply",
+    description="本地乘法插件",
+    input_params={
+        "type": "object",
+        "properties": {
+            "a": {
+                "type": "integer",
+                "description": "第一个参数"
+            },
+            "b": {
+                "type": "integer",
+                "description": "第二个参数"
+            }
+        },
+        "required": ["a", "b"]
+    }
+)
+def multiply(a: int, b: int) -> int:
+    return a * b 
+
+@tool(
+    name="divide",
+    description="本地除法插件",
+    input_params={
+        "type": "object",
+        "properties": {
+            "a": {
+                "type": "integer",
+                "description": "第一个参数"
+            },
+            "b": {
+                "type": "integer",
+                "description": "第二个参数"
+            }
+        },
+        "required": ["a", "b"]
+    }
+)
+def divide(a: int, b: int) -> int:
+    return a / b 
 
 from openjiuwen.core.single_agent import AgentCard, ReActAgentConfig, ReActAgent
 from openjiuwen.core.runner import Runner
@@ -67,12 +129,29 @@ react_agent = ReActAgent(card=agent_card).configure(react_agent_config)
 
 Runner.resource_mgr.add_tool(add)
 react_agent.ability_manager.add(add.card)
+Runner.resource_mgr.add_tool(subtract)
+react_agent.ability_manager.add(subtract.card)
+Runner.resource_mgr.add_tool(multiply)
+react_agent.ability_manager.add(multiply.card)
+Runner.resource_mgr.add_tool(divide)
+react_agent.ability_manager.add(divide.card)
 
 import asyncio
 
+query = '''
+你是一个专业的数学计算助手。
+当用户提出数学问题时，你需要：
+1. 理解问题中的数学表达式
+2. 使用提供的计算器工具进行计算
+3. 给出清晰的计算过程和结果
+4. 对于复杂表达式，需要分步计算
+				
+计算 100 / 4 + 25 * 2 的结果
+'''
+
 async def main():
     result = await Runner.run_agent(agent=react_agent,
-                                    inputs={"query": "使用本地加法插件计算1+1", "conversation_id": "013"})
+                                    inputs={"query": query, "conversation_id": "013"})
     print(result)
 
 if __name__ == "__main__":

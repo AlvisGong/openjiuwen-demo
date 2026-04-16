@@ -9,4 +9,7 @@
 
 1. 克隆仓库
    ```bash
+   pip install openjiuwen
+   pip install flask
+
    git clone https://github.com/AlvisGong/openjiuwen-demo.git
