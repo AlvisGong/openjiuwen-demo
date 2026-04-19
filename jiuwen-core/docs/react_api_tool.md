@@ -8,8 +8,11 @@
 > 参考样例：
 > 
 > API_BASE = "https://coding.dashscope.aliyuncs.com/v1";
+> 
 > API_KEY = "************************";
+> 
 > MODEL_NAME = "MiniMax-M2.5";
+> 
 > MODEL_PROVIDER = "OpenAI";
 
 - 准备天气服务
