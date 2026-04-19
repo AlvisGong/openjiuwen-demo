@@ -40,7 +40,6 @@ from openjiuwen.core.workflow import (
     QuestionerConfig,
     FieldInfo,
 )
-from tools.multi_workflow_agent_demo import create_financial_agent
 
 # Environment configuration
 load_dotenv()
