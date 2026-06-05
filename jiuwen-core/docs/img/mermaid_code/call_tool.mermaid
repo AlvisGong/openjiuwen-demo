@@ -1,0 +1,33 @@
+flowchart TD
+    %% 核心主体
+    R[ReActAgent<br>core/singleagent/agents/ReActAgent.java]
+
+    %% 依赖组件
+    M[Model (LLM)<br>foundation/llm/Model]
+    A[AbilityMgr<br>singleagent/AbilityMgr]
+    CE[ContextEngine<br>context/ContextEngine]
+
+    %% 工具类型（属于 AbilityMgr 管理）
+    subgraph Tools [工具类型管理]
+        T1[ToolCard<br>本地工具]
+        T2[WorkflowCard<br>工作流]
+        T3[AgentCard<br>子Agent]
+        T4[McpServerConfig<br>MCP]
+    end
+
+    %% 护栏机制
+    subgraph RailExecutor [RailExecutor 护栏机制]
+        direction LR
+        E1[BEFORE]
+        E2[AFTER]
+        E3[ON_EXCEPTION]
+    end
+
+    %% 连线关系
+    R --> M
+    R --> A
+    R --> CE
+
+    A --> Tools
+
+    R -.-> RailExecutor
