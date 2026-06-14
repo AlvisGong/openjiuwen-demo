@@ -1,0 +1,26 @@
+{
+  "skill_name": "code-review",
+  "evals": [
+    {
+      "id": 1,
+      "name": "python-security-review",
+      "prompt": "请评审这段 Python 代码：\n```python\ndef get_user(id):\n    conn = mysql.connect()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT * FROM users WHERE id = \" + id)\n    return cursor.fetchone()\n```",
+      "expected_output": "应该检测出 SQL 注入漏洞和资源泄漏问题",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "java-performance-review",
+      "prompt": "请评审这段 Java 代码：\n```java\npublic class UserService {\n    public List<User> getAllUsers() {\n        List<User> users = new ArrayList<>();\n        for (int i = 0; i < 10000; i++) {\n            User user = findById(i);\n            if (user != null) {\n                users.add(user);\n            }\n        }\n        return users;\n    }\n    \n    private User findById(int id) {\n        // 每次都查询数据库\n        return database.query(\"SELECT * FROM users WHERE id = \" + id);\n    }\n}\n```",
+      "expected_output": "应该检测出性能问题（N+1 查询）和 SQL 注入",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "python-code-quality",
+      "prompt": "评审这段代码有什么问题：\n```python\ndef calc(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z):\n    result=a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z\n    return result\n```",
+      "expected_output": "应该检测出代码质量问题（参数过多、命名不规范、缺少类型提示）",
+      "files": []
+    }
+  ]
+}
