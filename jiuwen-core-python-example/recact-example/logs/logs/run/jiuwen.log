@@ -1,0 +1,146 @@
+2026-04-16 20:57:23 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-16 20:57:24 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-16 20:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-16 20:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=weather_tool, changed from [] to [GLOBAL]
+2026-04-16 20:57:27 | common | default_trace_id | INFO | ReAct iteration 1/5
+2026-04-16 20:57:27 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=1
+2026-04-16 20:57:37 | common | default_trace_id | INFO | [LLM] <<< response: content_len=23, tool_call_count=1, tokens={input=226, output=110}
+2026-04-16 20:57:37 | common | default_trace_id | INFO | Executing tool: WeatherReporter with args: {"location": "beijing", "date": "2026-04-01"}
+2026-04-16 20:57:37 | common | default_trace_id | INFO | ReAct iteration 2/5
+2026-04-16 20:57:37 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=1
+2026-04-16 20:57:48 | common | default_trace_id | INFO | [LLM] <<< response: content_len=147, tool_call_count=0, tokens={input=434, output=183}
+2026-04-16 21:02:40 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-16 21:02:41 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-16 21:02:42 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-16 21:02:43 | common | default_trace_id | INFO | Using custom header and query authorization for WeatherMCPServer
+2026-04-16 21:02:44 | common | default_trace_id | INFO | SSE client connected successfully to http://127.0.0.1:8002/sse
+2026-04-16 21:02:44 | common | default_trace_id | INFO | Retrieved 1 tools from SSE server
+2026-04-16 21:02:44 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=55c36c408f7749a4b5988372dd0bfe87, changed from [] to [GLOBAL]
+2026-04-16 21:02:44 | common | default_trace_id | INFO | ReAct iteration 1/5
+2026-04-16 21:02:44 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=1
+2026-04-16 21:02:53 | common | default_trace_id | INFO | [LLM] <<< response: content_len=16, tool_call_count=1, tokens={input=269, output=47}
+2026-04-16 21:02:53 | common | default_trace_id | INFO | Executing tool: get_weather with args: {"location": "北京"}
+2026-04-16 21:02:53 | common | default_trace_id | INFO | Calling tool 'get_weather' via SSE with arguments: {'location': '北京'}
+2026-04-16 21:02:53 | common | default_trace_id | INFO | Tool 'get_weather' call completed via SSE
+2026-04-16 21:02:53 | common | default_trace_id | INFO | ReAct iteration 2/5
+2026-04-16 21:02:53 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=1
+2026-04-16 21:03:02 | common | default_trace_id | INFO | [LLM] <<< response: content_len=162, tool_call_count=0, tokens={input=342, output=193}
+2026-04-16 21:03:02 | common | default_trace_id | INFO | SSE client disconnected successfully
+2026-04-17 10:44:56 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 10:44:58 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 10:45:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 10:45:03 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=e5df93d2744f48bc8a4d0773ed5ee488, changed from [] to [GLOBAL]
+2026-04-17 10:45:03 | common | default_trace_id | INFO | ReAct iteration 1/5
+2026-04-17 10:45:03 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=1
+2026-04-17 10:45:15 | common | default_trace_id | INFO | [LLM] <<< response: content_len=14, tool_call_count=1, tokens={input=491, output=265}
+2026-04-17 10:45:15 | common | default_trace_id | INFO | Executing tool: python_review with args: {"code_content": "def calculate_total(items):\n    total = 0\n    for item in items:\n        total = total + item[\"price\"] * item[\"quantity\"]\n    return total\n\ndef process_user_input(user_id):\n    query = \"SELECT * FROM users WHERE id = \" + user_id\n    return execute_query(query)\n\ndef read_file(filename):\n    f = open(filename, 'r')\n    content = f.read()\n    f.close()\n    return content\n\ndef divide_numbers(a, b):\n    return a / b\n\nclass DataProcessor:\n    def __init__(self):\n        self.data = []\n\n    def add_data(self, data):\n        self.data.append(data)\n\n    def process(self):\n        results = []\n        for d in self.data:\n            if d != None:\n                results.append(d * 2)\n        return results", "file_path": "sample_code.py"}
+2026-04-17 10:45:15 | common | default_trace_id | ERROR | Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 10:45:15 | common | default_trace_id | ERROR | Ability execution error: [120001] Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 10:45:15 | common | default_trace_id | INFO | ReAct iteration 2/5
+2026-04-17 10:45:15 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=1
+2026-04-17 10:50:42 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 10:50:43 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 10:50:46 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 10:50:47 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 10:50:49 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=1083c5d13b37427db51d745714690816, changed from [] to [GLOBAL]
+2026-04-17 10:50:49 | common | default_trace_id | INFO | ReAct iteration 1/5
+2026-04-17 10:50:49 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=1
+2026-04-17 10:51:03 | common | default_trace_id | INFO | [LLM] <<< response: content_len=31, tool_call_count=1, tokens={input=491, output=259}
+2026-04-17 10:51:03 | common | default_trace_id | INFO | Executing tool: python_review with args: {"code_content": "def calculate_total(items):\n    total = 0\n    for item in items:\n        total = total + item[\"price\"] * item[\"quantity\"]\n    return total\n\ndef process_user_input(user_id):\n    query = \"SELECT * FROM users WHERE id = \" + user_id\n    return execute_query(query)\n\ndef read_file(filename):\n    f = open(filename, 'r')\n    content = f.read()\n    f.close()\n    return content\n\ndef divide_numbers(a, b):\n    return a / b\n\nclass DataProcessor:\n    def __init__(self):\n        self.data = []\n\n    def add_data(self, data):\n        self.data.append(data)\n\n    def process(self):\n        results = []\n        for d in self.data:\n            if d != None:\n                results.append(d * 2)\n        return results", "file_path": "sample_code.py"}
+2026-04-17 10:51:03 | common | default_trace_id | ERROR | Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 10:51:03 | common | default_trace_id | ERROR | Ability execution error: [120001] Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 10:51:03 | common | default_trace_id | INFO | ReAct iteration 2/5
+2026-04-17 10:51:03 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=1
+2026-04-17 10:51:43 | common | default_trace_id | INFO | [LLM] <<< response: content_len=2915, tool_call_count=0, tokens={input=713, output=1125}
+2026-04-17 11:42:34 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 11:42:36 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 11:42:37 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 11:42:38 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 11:42:39 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=python_review_skill, changed from [] to [GLOBAL]
+2026-04-17 11:42:39 | common | default_trace_id | INFO | ReAct iteration 1/5
+2026-04-17 11:42:39 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=1
+2026-04-17 11:42:57 | common | default_trace_id | INFO | [LLM] <<< response: content_len=20, tool_call_count=1, tokens={input=493, output=365}
+2026-04-17 11:42:57 | common | default_trace_id | INFO | Executing tool: PythonReviewSkill with args: {"code_content": "def calculate_total(items):\n    total = 0\n    for item in items:\n        total = total + item[\"price\"] * item[\"quantity\"]\n    return total\n\ndef process_user_input(user_id):\n    query = \"SELECT * FROM users WHERE id = \" + user_id\n    return execute_query(query)\n\ndef read_file(filename):\n    f = open(filename, 'r')\n    content = f.read()\n    f.close()\n    return content\n\ndef divide_numbers(a, b):\n    return a / b\n\nclass DataProcessor:\n    def __init__(self):\n        self.data = []\n\n    def add_data(self, data):\n        self.data.append(data)\n\n    def process(self):\n        results = []\n        for d in self.data:\n            if d != None:\n                results.append(d * 2)\n        return results", "file_path": "sample_code.py"}
+2026-04-17 11:42:57 | common | default_trace_id | ERROR | Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 11:42:57 | common | default_trace_id | ERROR | Ability execution error: [120001] Tool execution error: Model.__init__() got an unexpected keyword argument 'client_config'
+2026-04-17 11:42:57 | common | default_trace_id | INFO | ReAct iteration 2/5
+2026-04-17 11:42:57 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=1
+2026-04-17 11:44:57 | common | default_trace_id | INFO | [LLM] <<< response: content_len=4294, tool_call_count=0, tokens={input=711, output=1739}

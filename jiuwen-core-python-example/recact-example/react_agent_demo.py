@@ -51,7 +51,7 @@ MODEL_PROVIDER = os.getenv("MODEL_PROVIDER", "")
 MODEL_ID = "default_model"
 
 # Skills and files directories
-SKILLS_DIR = Path(os.getenv("SKILLS_DIR", str(Path(__file__).parent / "skills")))
+SKILLS_DIR = Path(os.getenv("SKILLS_DIR", str(Path(__file__).parent.parent / "tools" / "skills")))
 FILES_BASE_DIR = Path(os.getenv("FILES_BASE_DIR", str(Path(__file__).parent)))
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", str(Path(__file__).parent / "output")))
 
@@ -84,7 +84,9 @@ class ReactAgentWithSkillsMcpWorkflow:
     @staticmethod
     def _create_client_config() -> ModelClientConfig:
         """Create model client configuration."""
+        client_type = f"llm_{MODEL_PROVIDER}"
         return ModelClientConfig(
+            client_type=client_type,
             client_provider=MODEL_PROVIDER,
             api_key=API_KEY,
             api_base=API_BASE,

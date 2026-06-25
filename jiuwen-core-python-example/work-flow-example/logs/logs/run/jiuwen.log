@@ -1,0 +1,589 @@
+2026-04-17 18:48:44 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 18:48:46 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 18:48:49 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 18:48:50 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 18:48:53 | common | default_trace_id | INFO | BaseAgent.add_workflows called with 3 workflows
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Workflow weather_flow_1.0: existing_keys=set(), exists=False, is_provider=False
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Adding workflow instance weather_flow_1.0 to global resource_mgr
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Added tags to resource. resource_id=weather_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Successfully added workflow instance weather_flow_1.0
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Workflow stock_flow_1.0: existing_keys={'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Adding workflow instance stock_flow_1.0 to global resource_mgr
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Added tags to resource. resource_id=stock_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Successfully added workflow instance stock_flow_1.0
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Workflow travel_flow_1.0: existing_keys={'weather_flow_1.0', 'stock_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Adding workflow instance travel_flow_1.0 to global resource_mgr
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Added tags to resource. resource_id=travel_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Successfully added workflow instance travel_flow_1.0
+2026-04-17 18:48:53 | common | default_trace_id | INFO | BaseController: Created subscription for conversation_id=demo-jump-recovery-001, topic=controller_messages_demo-jump-recovery-001
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Intent detection module initialized
+2026-04-17 18:48:53 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n\n当前输入：\n查询天气', name=None)]
+2026-04-17 18:48:53 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6b6e3b46b7a9a19b1a2196490c3e01e35d78a731d4eb2058d91a34bd28096f57, changed from [] to [GLOBAL]
+2026-04-17 18:49:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 18:49:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 18:49:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 18:49:09 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state=None
+2026-04-17 18:49:09 | common | default_trace_id | INFO | _find_interrupted_task: No workflow_controller state found
+2026-04-17 18:49:09 | common | default_trace_id | INFO | No interrupted task for workflow 天气查询, creating new task
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查询天气'}, query: 查询天气
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Added user message: 查询天气
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Handling new task: task_id=workflow_6c5355c3-bd7c-42b7-a8e4-a2e8eecb1a7a
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 18:49:09 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 18:49:09 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 18:53:09 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 18:53:09 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 18:53:09 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 18:53:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n\n当前输入：\n查看股票', name=None)]
+2026-04-17 18:53:30 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 18:53:30 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 18:53:30 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 18:53:30 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_6c5355c3-bd7c-42b7-a8e4-a2e8eecb1a7a', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}}}
+2026-04-17 18:53:30 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0']
+2026-04-17 18:53:30 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 18:53:30 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 股票查询
+2026-04-17 18:53:30 | common | default_trace_id | INFO | No interrupted task for workflow 股票查询, creating new task
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查看股票'}, query: 查看股票
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Added user message: 查看股票
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Handling new task: task_id=workflow_5b89cb21-6136-43f4-b976-3a1778a69073
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 18:53:30 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 18:53:30 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 18:57:31 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Workflow interrupted: stock_flow_1.0
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Task interrupted: workflow=stock_flow_1.0, state_key=stock_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 18:57:31 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 18:57:31 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 18:57:31 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n\n当前输入：\n查询北京天气', name=None)]
+2026-04-17 18:57:51 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 18:57:51 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 18:57:51 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 18:57:51 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_6c5355c3-bd7c-42b7-a8e4-a2e8eecb1a7a', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_5b89cb21-6136-43f4-b976-3a1778a69073', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供股票代码，如 AAPL、TSLA相关的信息'}}}
+2026-04-17 18:57:51 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-17 18:57:51 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['weather_flow_1_0', 'weather_flow']
+2026-04-17 18:57:51 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for weather_flow_1_0
+2026-04-17 18:57:51 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Found interrupted task for workflow 天气查询, resuming
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Added user message: 查询北京天气
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_6c5355c3-bd7c-42b7-a8e4-a2e8eecb1a7a
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查询北京天气
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 18:57:51 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 18:57:51 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 18:58:11 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 18:58:11 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-17 18:58:11 | common | default_trace_id | INFO | Workflow completed: weather_flow_1.0
+2026-04-17 18:58:11 | common | default_trace_id | INFO | Cleared interrupted state for workflow: weather_flow_1.0, state_key: weather_flow_1_0
+2026-04-17 18:58:11 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-17 18:58:11 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n用户: 查询北京天气\n助手: 北京\n\n当前输入：\n查看AAPL股票', name=None)]
+2026-04-17 18:58:33 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 18:58:33 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 18:58:33 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 18:58:33 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_5b89cb21-6136-43f4-b976-3a1778a69073', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供股票代码，如 AAPL、TSLA相关的信息'}}}
+2026-04-17 18:58:33 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['stock_flow_1_0']
+2026-04-17 18:58:33 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 18:58:33 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for stock_flow_1_0
+2026-04-17 18:58:33 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Found interrupted task for workflow 股票查询, resuming
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Added user message: 查看AAPL股票
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_5b89cb21-6136-43f4-b976-3a1778a69073
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查看AAPL股票
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 18:58:33 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 18:58:33 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 18:58:55 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 18:58:55 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-17 18:58:55 | common | default_trace_id | INFO | Workflow completed: stock_flow_1.0
+2026-04-17 18:58:55 | common | default_trace_id | INFO | Cleared interrupted state for workflow: stock_flow_1.0, state_key: stock_flow_1_0
+2026-04-17 18:58:55 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-17 18:58:55 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n用户: 查询北京天气\n助手: 北京\n用户: 查看AAPL股票\n助手: AAPL\n\n当前输入：\n规划旅行', name=None)]
+2026-04-17 18:59:15 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 3}
+2026-04-17 18:59:15 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: travel_flow
+2026-04-17 18:59:15 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: travel_flow
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Multi workflow mode: detected 旅行规划
+2026-04-17 18:59:15 | common | default_trace_id | INFO | _find_interrupted_task: workflow=旅行规划, state={'interrupted_tasks': {}}
+2026-04-17 18:59:15 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=[]
+2026-04-17 18:59:15 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['travel_flow_1_0', 'travel_flow']
+2026-04-17 18:59:15 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 旅行规划
+2026-04-17 18:59:15 | common | default_trace_id | INFO | No interrupted task for workflow 旅行规划, creating new task
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Creating task with inputs: {'query': '规划旅行'}, query: 规划旅行
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Added user message: 规划旅行
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Handling new task: task_id=workflow_5375e9d3-86ce-496e-bd50-315f1e533ada
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: travel_flow_1.0
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 18:59:15 | common | default_trace_id | INFO | Starting workflow: travel_flow_1.0
+2026-04-17 18:59:15 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=travel_flow_1.0
+2026-04-17 19:21:23 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 19:21:24 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 19:21:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 19:21:28 | common | default_trace_id | INFO | BaseAgent.add_workflows called with 3 workflows
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Workflow weather_flow_1.0: existing_keys=set(), exists=False, is_provider=False
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Adding workflow instance weather_flow_1.0 to global resource_mgr
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=weather_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Successfully added workflow instance weather_flow_1.0
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Workflow stock_flow_1.0: existing_keys={'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Adding workflow instance stock_flow_1.0 to global resource_mgr
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=stock_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Successfully added workflow instance stock_flow_1.0
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Workflow travel_flow_1.0: existing_keys={'stock_flow_1.0', 'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Adding workflow instance travel_flow_1.0 to global resource_mgr
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=travel_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Successfully added workflow instance travel_flow_1.0
+2026-04-17 19:21:28 | common | default_trace_id | INFO | BaseController: Created subscription for conversation_id=demo-jump-recovery-001, topic=controller_messages_demo-jump-recovery-001
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Intent detection module initialized
+2026-04-17 19:21:28 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n\n当前输入：\n查询天气', name=None)]
+2026-04-17 19:21:28 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=7b8fb3e110f28a557fc010f137712a38c200cd6e8061815ab2b90fe8aa9a2a52, changed from [] to [GLOBAL]
+2026-04-17 19:21:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:21:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:21:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:21:34 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state=None
+2026-04-17 19:21:34 | common | default_trace_id | INFO | _find_interrupted_task: No workflow_controller state found
+2026-04-17 19:21:34 | common | default_trace_id | INFO | No interrupted task for workflow 天气查询, creating new task
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查询天气'}, query: 查询天气
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Added user message: 查询天气
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Handling new task: task_id=workflow_3ee43d87-2cd1-431c-806a-bdf8a93fa89c
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:21:34 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:21:34 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:21:40 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:21:40 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:21:40 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:21:40 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n\n当前输入：\n查看股票', name=None)]
+2026-04-17 19:21:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 19:21:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 19:21:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 19:21:46 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_3ee43d87-2cd1-431c-806a-bdf8a93fa89c', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}}}
+2026-04-17 19:21:46 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0']
+2026-04-17 19:21:46 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 19:21:46 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 股票查询
+2026-04-17 19:21:46 | common | default_trace_id | INFO | No interrupted task for workflow 股票查询, creating new task
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查看股票'}, query: 查看股票
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Added user message: 查看股票
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Handling new task: task_id=workflow_b36dc073-b968-4f3a-b414-777018d454f0
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:21:46 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 19:21:46 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 19:21:53 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Workflow interrupted: stock_flow_1.0
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Task interrupted: workflow=stock_flow_1.0, state_key=stock_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:21:53 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:21:53 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:21:53 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n\n当前输入：\n查询北京天气', name=None)]
+2026-04-17 19:21:58 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:21:58 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:21:58 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:21:58 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_3ee43d87-2cd1-431c-806a-bdf8a93fa89c', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_b36dc073-b968-4f3a-b414-777018d454f0', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供股票代码，如 AAPL、TSLA相关的信息'}}}
+2026-04-17 19:21:58 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-17 19:21:58 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['weather_flow_1_0', 'weather_flow']
+2026-04-17 19:21:58 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for weather_flow_1_0
+2026-04-17 19:21:58 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Found interrupted task for workflow 天气查询, resuming
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Added user message: 查询北京天气
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_3ee43d87-2cd1-431c-806a-bdf8a93fa89c
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查询北京天气
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:21:58 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:21:58 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:21:58 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-17 19:21:58 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-17 19:21:58 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:21:58 | common | default_trace_id | ERROR | Workflow execution failed: weather_flow_1.0, error: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-17 19:21:58 | common | default_trace_id | ERROR | BaseController: handle_event raised exception: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-17 19:22:24 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 19:22:25 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 19:22:27 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 19:22:28 | common | default_trace_id | INFO | BaseAgent.add_workflows called with 3 workflows
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Workflow weather_flow_1.0: existing_keys=set(), exists=False, is_provider=False
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Adding workflow instance weather_flow_1.0 to global resource_mgr
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=weather_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Successfully added workflow instance weather_flow_1.0
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Workflow stock_flow_1.0: existing_keys={'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Adding workflow instance stock_flow_1.0 to global resource_mgr
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=stock_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Successfully added workflow instance stock_flow_1.0
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Workflow travel_flow_1.0: existing_keys={'weather_flow_1.0', 'stock_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Adding workflow instance travel_flow_1.0 to global resource_mgr
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Added tags to resource. resource_id=travel_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Successfully added workflow instance travel_flow_1.0
+2026-04-17 19:22:28 | common | default_trace_id | INFO | BaseController: Created subscription for conversation_id=demo-jump-recovery-001, topic=controller_messages_demo-jump-recovery-001
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Intent detection module initialized
+2026-04-17 19:22:28 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n\n当前输入：\n查询天气', name=None)]
+2026-04-17 19:22:28 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=7b8fb3e110f28a557fc010f137712a38c200cd6e8061815ab2b90fe8aa9a2a52, changed from [] to [GLOBAL]
+2026-04-17 19:22:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:22:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:22:34 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:22:34 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state=None
+2026-04-17 19:22:34 | common | default_trace_id | INFO | _find_interrupted_task: No workflow_controller state found
+2026-04-17 19:22:34 | common | default_trace_id | INFO | No interrupted task for workflow 天气查询, creating new task
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查询天气'}, query: 查询天气
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Added user message: 查询天气
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Handling new task: task_id=workflow_05f758cc-1204-4015-9098-c1a4fafa2a50
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:22:34 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:22:34 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:22:42 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:22:42 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:22:42 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:22:42 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n\n当前输入：\n查看股票', name=None)]
+2026-04-17 19:22:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 19:22:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 19:22:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 19:22:48 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_05f758cc-1204-4015-9098-c1a4fafa2a50', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}}}
+2026-04-17 19:22:48 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0']
+2026-04-17 19:22:48 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 19:22:48 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 股票查询
+2026-04-17 19:22:48 | common | default_trace_id | INFO | No interrupted task for workflow 股票查询, creating new task
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查看股票'}, query: 查看股票
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Added user message: 查看股票
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Handling new task: task_id=workflow_a7ad98a9-95b7-46bf-a817-28b4e54a5503
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:22:48 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 19:22:48 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 19:22:56 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Workflow interrupted: stock_flow_1.0
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Task interrupted: workflow=stock_flow_1.0, state_key=stock_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:22:56 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:22:56 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:22:56 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n\n当前输入：\n查询北京天气', name=None)]
+2026-04-17 19:23:00 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:23:00 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:23:00 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:23:00 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_05f758cc-1204-4015-9098-c1a4fafa2a50', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_a7ad98a9-95b7-46bf-a817-28b4e54a5503', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供股票代码，如 AAPL、TSLA相关的信息'}}}
+2026-04-17 19:23:00 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-17 19:23:00 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['weather_flow_1_0', 'weather_flow']
+2026-04-17 19:23:00 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for weather_flow_1_0
+2026-04-17 19:23:00 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Found interrupted task for workflow 天气查询, resuming
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Added user message: 查询北京天气
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_05f758cc-1204-4015-9098-c1a4fafa2a50
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查询北京天气
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:23:00 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:23:00 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:23:06 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:23:06 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:23:06 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:23:06 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请您提供地点，如城市名称相关的信息\n用户: 查看股票\n助手: 请您提供股票代码，如 AAPL、TSLA相关的信息\n用户: 查询北京天气\n助手: 请您提供地点，如城市名称相关的信息\n\n当前输入：\n查看AAPL股票', name=None)]
+2026-04-17 19:23:10 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 19:23:10 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 19:23:10 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 19:23:10 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_05f758cc-1204-4015-9098-c1a4fafa2a50', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'user_inputs': {'questioner': '查询北京天气'}, 'raw_inputs': None}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供地点，如城市名称相关的信息'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_a7ad98a9-95b7-46bf-a817-28b4e54a5503', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请您提供股票代码，如 AAPL、TSLA相关的信息'}}}
+2026-04-17 19:23:10 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-17 19:23:10 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 19:23:10 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for stock_flow_1_0
+2026-04-17 19:23:10 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Found interrupted task for workflow 股票查询, resuming
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Added user message: 查看AAPL股票
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_a7ad98a9-95b7-46bf-a817-28b4e54a5503
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查看AAPL股票
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:23:10 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 19:23:10 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 19:23:10 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-17 19:23:10 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-17 19:23:10 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:23:10 | common | default_trace_id | ERROR | Workflow execution failed: stock_flow_1.0, error: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-17 19:23:10 | common | default_trace_id | ERROR | BaseController: handle_event raised exception: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-17 19:27:25 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-17 19:27:27 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-17 19:27:29 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-17 19:27:30 | common | default_trace_id | INFO | BaseAgent.add_workflows called with 3 workflows
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Workflow weather_flow_1.0: existing_keys=set(), exists=False, is_provider=False
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Adding workflow instance weather_flow_1.0 to global resource_mgr
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Added tags to resource. resource_id=weather_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Successfully added workflow instance weather_flow_1.0
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Workflow stock_flow_1.0: existing_keys={'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Adding workflow instance stock_flow_1.0 to global resource_mgr
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Added tags to resource. resource_id=stock_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Successfully added workflow instance stock_flow_1.0
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Workflow travel_flow_1.0: existing_keys={'weather_flow_1.0', 'stock_flow_1.0'}, exists=False, is_provider=False
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Adding workflow instance travel_flow_1.0 to global resource_mgr
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Added tags to resource. resource_id=travel_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Successfully added workflow instance travel_flow_1.0
+2026-04-17 19:27:30 | common | default_trace_id | INFO | BaseController: Created subscription for conversation_id=demo-jump-recovery-001, topic=controller_messages_demo-jump-recovery-001
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Intent detection module initialized
+2026-04-17 19:27:30 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n\n当前输入：\n查询天气', name=None)]
+2026-04-17 19:27:30 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=7b8fb3e110f28a557fc010f137712a38c200cd6e8061815ab2b90fe8aa9a2a52, changed from [] to [GLOBAL]
+2026-04-17 19:27:37 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:27:37 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:27:37 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:27:37 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state=None
+2026-04-17 19:27:37 | common | default_trace_id | INFO | _find_interrupted_task: No workflow_controller state found
+2026-04-17 19:27:37 | common | default_trace_id | INFO | No interrupted task for workflow 天气查询, creating new task
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查询天气'}, query: 查询天气
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Added user message: 查询天气
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Handling new task: task_id=workflow_ab396a72-09dc-4bd1-a030-00f63440f3aa
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:27:37 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:27:37 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:27:37 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:27:37 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:27:37 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n\n当前输入：\n查看股票', name=None)]
+2026-04-17 19:27:43 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 19:27:43 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 19:27:43 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 19:27:43 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_ab396a72-09dc-4bd1-a030-00f63440f3aa', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供地点，如城市名称'}}}
+2026-04-17 19:27:43 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0']
+2026-04-17 19:27:43 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 19:27:43 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 股票查询
+2026-04-17 19:27:43 | common | default_trace_id | INFO | No interrupted task for workflow 股票查询, creating new task
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查看股票'}, query: 查看股票
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Added user message: 查看股票
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Handling new task: task_id=workflow_aef02dfe-e7ed-44b2-9dcf-c6c5d0f3b37e
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 19:27:43 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 19:27:43 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Workflow interrupted: stock_flow_1.0
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:27:43 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:27:44 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:27:44 | common | default_trace_id | INFO | Task interrupted: workflow=stock_flow_1.0, state_key=stock_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:27:44 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:27:44 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:27:44 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:27:44 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n\n当前输入：\n查询北京天气', name=None)]
+2026-04-17 19:27:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-17 19:27:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-17 19:27:48 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-17 19:27:48 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_ab396a72-09dc-4bd1-a030-00f63440f3aa', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供地点，如城市名称'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_aef02dfe-e7ed-44b2-9dcf-c6c5d0f3b37e', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供股票代码，如 AAPL、TSLA'}}}
+2026-04-17 19:27:48 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-17 19:27:48 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['weather_flow_1_0', 'weather_flow']
+2026-04-17 19:27:48 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for weather_flow_1_0
+2026-04-17 19:27:48 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Found interrupted task for workflow 天气查询, resuming
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Added user message: 查询北京天气
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_ab396a72-09dc-4bd1-a030-00f63440f3aa
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查询北京天气
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:27:48 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-17 19:27:48 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-17 19:27:53 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:27:53 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-17 19:27:53 | common | default_trace_id | INFO | Workflow completed: weather_flow_1.0
+2026-04-17 19:27:53 | common | default_trace_id | INFO | Cleared interrupted state for workflow: weather_flow_1.0, state_key: weather_flow_1_0
+2026-04-17 19:27:53 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-17 19:27:53 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n\n当前输入：\n查看AAPL股票', name=None)]
+2026-04-17 19:27:57 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-17 19:27:57 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-17 19:27:57 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-17 19:27:57 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_aef02dfe-e7ed-44b2-9dcf-c6c5d0f3b37e', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供股票代码，如 AAPL、TSLA'}}}
+2026-04-17 19:27:57 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['stock_flow_1_0']
+2026-04-17 19:27:57 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-17 19:27:57 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for stock_flow_1_0
+2026-04-17 19:27:57 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Found interrupted task for workflow 股票查询, resuming
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Added user message: 查看AAPL股票
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_aef02dfe-e7ed-44b2-9dcf-c6c5d0f3b37e
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查看AAPL股票
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:27:57 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-17 19:27:57 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-17 19:28:07 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:28:07 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-17 19:28:07 | common | default_trace_id | INFO | Workflow completed: stock_flow_1.0
+2026-04-17 19:28:07 | common | default_trace_id | INFO | Cleared interrupted state for workflow: stock_flow_1.0, state_key: stock_flow_1_0
+2026-04-17 19:28:07 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-17 19:28:07 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n用户: 查看AAPL股票\n助手: AAPL\n\n当前输入：\n规划旅行', name=None)]
+2026-04-17 19:28:14 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 3}
+2026-04-17 19:28:14 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: travel_flow
+2026-04-17 19:28:14 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: travel_flow
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Multi workflow mode: detected 旅行规划
+2026-04-17 19:28:14 | common | default_trace_id | INFO | _find_interrupted_task: workflow=旅行规划, state={'interrupted_tasks': {}}
+2026-04-17 19:28:14 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=[]
+2026-04-17 19:28:14 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['travel_flow_1_0', 'travel_flow']
+2026-04-17 19:28:14 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 旅行规划
+2026-04-17 19:28:14 | common | default_trace_id | INFO | No interrupted task for workflow 旅行规划, creating new task
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Creating task with inputs: {'query': '规划旅行'}, query: 规划旅行
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Added user message: 规划旅行
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Handling new task: task_id=workflow_f54b07ff-daf6-4344-8076-d4aebd601dde
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: travel_flow_1.0
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Starting workflow: travel_flow_1.0
+2026-04-17 19:28:14 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=travel_flow_1.0
+2026-04-17 19:28:14 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Workflow interrupted: travel_flow_1.0
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Task interrupted: workflow=travel_flow_1.0, state_key=travel_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-17 19:28:14 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-17 19:28:14 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-17 19:28:14 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n用户: 查看AAPL股票\n助手: AAPL\n用户: 规划旅行\n助手: 请提供目的地，如城市或景点名称\n\n当前输入：\n去巴黎旅行', name=None)]
+2026-04-17 19:28:18 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 3}
+2026-04-17 19:28:18 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: travel_flow
+2026-04-17 19:28:18 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: travel_flow
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Multi workflow mode: detected 旅行规划
+2026-04-17 19:28:18 | common | default_trace_id | INFO | _find_interrupted_task: workflow=旅行规划, state={'interrupted_tasks': {'travel_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_f54b07ff-daf6-4344-8076-d4aebd601dde', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'travel_flow_1.0', 'target_name': '旅行规划', 'arguments': {'query': '规划旅行'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供目的地，如城市或景点名称'}}}
+2026-04-17 19:28:18 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['travel_flow_1_0']
+2026-04-17 19:28:18 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['travel_flow_1_0', 'travel_flow']
+2026-04-17 19:28:18 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for travel_flow_1_0
+2026-04-17 19:28:18 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Found interrupted task for workflow 旅行规划, resuming
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Added user message: 去巴黎旅行
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_f54b07ff-daf6-4344-8076-d4aebd601dde
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=去巴黎旅行
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: travel_flow_1.0
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-17 19:28:18 | common | default_trace_id | INFO | Starting workflow: travel_flow_1.0
+2026-04-17 19:28:18 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=travel_flow_1.0
+2026-04-17 19:28:28 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-17 19:28:28 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-17 19:28:28 | common | default_trace_id | INFO | Workflow completed: travel_flow_1.0
+2026-04-17 19:28:28 | common | default_trace_id | INFO | Cleared interrupted state for workflow: travel_flow_1.0, state_key: travel_flow_1_0
+2026-04-17 19:28:28 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
