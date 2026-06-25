@@ -1,0 +1,1137 @@
+2026-04-18 21:06:10 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:06:12 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:06:13 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:06:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-18 21:20:04 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:20:05 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:20:06 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:20:06 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:20:08 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-18 21:20:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:36 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:41 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:44 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:45 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:49 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:51 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:54 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:20:56 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:00 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:02 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:10 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:17 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:22 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:25 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:30 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:32 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:44 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:46 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:51 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:53 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:57 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:21:59 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:03 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:05 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:11 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:17 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:32 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:35 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:41 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:46 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:48 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:52 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:55 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:22:59 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:01 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:05 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:07 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:11 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:18 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:25 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:31 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:23:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:04 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:28:05 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:28:06 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:28:06 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:28:08 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:28:09 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-18 21:28:30 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:32 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:35 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:41 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:43 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:47 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:49 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:54 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:28:56 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:00 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:02 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:06 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:19 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:21 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:25 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:31 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:44 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:46 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:50 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:54 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:29:59 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:01 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:05 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:07 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:22 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:25 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:46 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:49 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:55 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:30:57 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:06 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:19 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:21 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:24 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:26 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:29 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:32 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:36 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:38 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:42 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:43 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:47 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:48 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:52 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:31:54 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://coding.dashscope.aliyuncs.com/v1
+2026-04-18 21:32:37 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:32:38 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:32:38 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:32:38 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:32:40 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:32:41 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-18 21:33:01 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:03 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:07 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:09 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:12 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:23 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:29 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:36 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:40 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:42 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:47 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:50 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:54 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:33:56 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:00 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:02 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:07 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:09 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:22 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:26 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:28 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:35 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:41 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:43 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:48 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:51 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:55 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:34:57 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:13 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:35:14 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:35:14 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:35:14 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:35:16 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:35:17 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-18 21:35:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:39 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:43 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:44 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:48 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:50 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:55 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:35:57 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:02 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:04 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:09 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:11 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:18 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:22 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:24 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:28 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:31 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:35 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:37 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:42 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:44 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:49 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:51 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:56 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:36:58 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:05 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:13 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:19 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:25 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:32 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:56 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:37:59 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:02 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:04 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:08 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:11 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:15 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:17 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:20 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:23 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:27 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:29 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:33 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:36 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:40 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:42 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:46 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:48 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:51 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:53 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:57 | common | default_trace_id | WARNING | Embedding request failed (attempt 1/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:38:59 | common | default_trace_id | WARNING | Embedding request failed (attempt 2/3): 404 Client Error: Not Found for url: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-04-18 21:39:54 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-18 21:39:56 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-18 21:39:57 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-18 21:39:58 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 11:30:25 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 11:30:27 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 11:30:29 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 11:30:30 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 11:30:32 | common | default_trace_id | INFO | BaseAgent.add_workflows called with 3 workflows
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Workflow weather_flow_1.0: existing_keys=set(), exists=False, is_provider=False
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Adding workflow instance weather_flow_1.0 to global resource_mgr
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Added tags to resource. resource_id=weather_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Successfully added workflow instance weather_flow_1.0
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Workflow stock_flow_1.0: existing_keys={'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Adding workflow instance stock_flow_1.0 to global resource_mgr
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Added tags to resource. resource_id=stock_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Successfully added workflow instance stock_flow_1.0
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Workflow travel_flow_1.0: existing_keys={'stock_flow_1.0', 'weather_flow_1.0'}, exists=False, is_provider=False
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Adding workflow instance travel_flow_1.0 to global resource_mgr
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Added tags to resource. resource_id=travel_flow_1.0, added_tags={'multi_workflow_jump_agent'}, current_tags=['multi_workflow_jump_agent']
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Successfully added workflow instance travel_flow_1.0
+2026-04-19 11:30:32 | common | default_trace_id | INFO | BaseController: Created subscription for conversation_id=demo-jump-recovery-001, topic=controller_messages_demo-jump-recovery-001
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Intent detection module initialized
+2026-04-19 11:30:32 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n\n当前输入：\n查询天气', name=None)]
+2026-04-19 11:30:32 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=7b8fb3e110f28a557fc010f137712a38c200cd6e8061815ab2b90fe8aa9a2a52, changed from [] to [GLOBAL]
+2026-04-19 11:30:38 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-19 11:30:38 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-19 11:30:38 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-19 11:30:38 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state=None
+2026-04-19 11:30:38 | common | default_trace_id | INFO | _find_interrupted_task: No workflow_controller state found
+2026-04-19 11:30:38 | common | default_trace_id | INFO | No interrupted task for workflow 天气查询, creating new task
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查询天气'}, query: 查询天气
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Added user message: 查询天气
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Handling new task: task_id=workflow_c9b34068-909c-4588-a68f-ec3ee94e4725
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-19 11:30:38 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-19 11:30:38 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Workflow interrupted: weather_flow_1.0
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Task interrupted: workflow=weather_flow_1.0, state_key=weather_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-19 11:30:38 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-19 11:30:38 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-19 11:30:38 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n\n当前输入：\n查看股票', name=None)]
+2026-04-19 11:30:42 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-19 11:30:42 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-19 11:30:42 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-19 11:30:42 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_c9b34068-909c-4588-a68f-ec3ee94e4725', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供地点，如城市名称'}}}
+2026-04-19 11:30:42 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0']
+2026-04-19 11:30:42 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-19 11:30:42 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 股票查询
+2026-04-19 11:30:42 | common | default_trace_id | INFO | No interrupted task for workflow 股票查询, creating new task
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Creating task with inputs: {'query': '查看股票'}, query: 查看股票
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Added user message: 查看股票
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Handling new task: task_id=workflow_098bb490-14a3-4f48-8d4a-9a9b84dd0248
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-19 11:30:42 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-19 11:30:42 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Workflow interrupted: stock_flow_1.0
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Task interrupted: workflow=stock_flow_1.0, state_key=stock_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-19 11:30:42 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-19 11:30:42 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-19 11:30:42 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n\n当前输入：\n查询北京天气', name=None)]
+2026-04-19 11:30:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 1}
+2026-04-19 11:30:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: weather_flow
+2026-04-19 11:30:46 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: weather_flow
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Multi workflow mode: detected 天气查询
+2026-04-19 11:30:46 | common | default_trace_id | INFO | _find_interrupted_task: workflow=天气查询, state={'interrupted_tasks': {'weather_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_c9b34068-909c-4588-a68f-ec3ee94e4725', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'weather_flow_1.0', 'target_name': '天气查询', 'arguments': {'query': '查询天气'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供地点，如城市名称'}, 'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_098bb490-14a3-4f48-8d4a-9a9b84dd0248', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供股票代码，如 AAPL、TSLA'}}}
+2026-04-19 11:30:46 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['weather_flow_1_0', 'stock_flow_1_0']
+2026-04-19 11:30:46 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['weather_flow_1_0', 'weather_flow']
+2026-04-19 11:30:46 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for weather_flow_1_0
+2026-04-19 11:30:46 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Found interrupted task for workflow 天气查询, resuming
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Added user message: 查询北京天气
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_c9b34068-909c-4588-a68f-ec3ee94e4725
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查询北京天气
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: weather_flow_1.0
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:30:46 | common | default_trace_id | INFO | Starting workflow: weather_flow_1.0
+2026-04-19 11:30:46 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=weather_flow_1.0
+2026-04-19 11:30:51 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:30:51 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-19 11:30:51 | common | default_trace_id | INFO | Workflow completed: weather_flow_1.0
+2026-04-19 11:30:51 | common | default_trace_id | INFO | Cleared interrupted state for workflow: weather_flow_1.0, state_key: weather_flow_1_0
+2026-04-19 11:30:51 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-19 11:30:51 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n\n当前输入：\n查看AAPL股票', name=None)]
+2026-04-19 11:30:55 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 2}
+2026-04-19 11:30:55 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: stock_flow
+2026-04-19 11:30:55 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: stock_flow
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Multi workflow mode: detected 股票查询
+2026-04-19 11:30:55 | common | default_trace_id | INFO | _find_interrupted_task: workflow=股票查询, state={'interrupted_tasks': {'stock_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_098bb490-14a3-4f48-8d4a-9a9b84dd0248', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'stock_flow_1.0', 'target_name': '股票查询', 'arguments': {'query': '查看股票'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供股票代码，如 AAPL、TSLA'}}}
+2026-04-19 11:30:55 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['stock_flow_1_0']
+2026-04-19 11:30:55 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['stock_flow_1_0', 'stock_flow']
+2026-04-19 11:30:55 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for stock_flow_1_0
+2026-04-19 11:30:55 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Found interrupted task for workflow 股票查询, resuming
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Added user message: 查看AAPL股票
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_098bb490-14a3-4f48-8d4a-9a9b84dd0248
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=查看AAPL股票
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: stock_flow_1.0
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:30:55 | common | default_trace_id | INFO | Starting workflow: stock_flow_1.0
+2026-04-19 11:30:55 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=stock_flow_1.0
+2026-04-19 11:31:00 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:31:00 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-19 11:31:00 | common | default_trace_id | INFO | Workflow completed: stock_flow_1.0
+2026-04-19 11:31:00 | common | default_trace_id | INFO | Cleared interrupted state for workflow: stock_flow_1.0, state_key: stock_flow_1_0
+2026-04-19 11:31:00 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-19 11:31:00 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n用户: 查看AAPL股票\n助手: AAPL\n\n当前输入：\n规划旅行', name=None)]
+2026-04-19 11:31:05 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 3}
+2026-04-19 11:31:05 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: travel_flow
+2026-04-19 11:31:05 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: travel_flow
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Multi workflow mode: detected 旅行规划
+2026-04-19 11:31:05 | common | default_trace_id | INFO | _find_interrupted_task: workflow=旅行规划, state={'interrupted_tasks': {}}
+2026-04-19 11:31:05 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=[]
+2026-04-19 11:31:05 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['travel_flow_1_0', 'travel_flow']
+2026-04-19 11:31:05 | common | default_trace_id | INFO | _find_interrupted_task: No interrupted task found for workflow 旅行规划
+2026-04-19 11:31:05 | common | default_trace_id | INFO | No interrupted task for workflow 旅行规划, creating new task
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Creating task with inputs: {'query': '规划旅行'}, query: 规划旅行
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Added user message: 规划旅行
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Handling new task: task_id=workflow_1224c06e-58fb-446d-b1ad-d7c0c86dc917
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: travel_flow_1.0
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Starting workflow: travel_flow_1.0
+2026-04-19 11:31:05 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=travel_flow_1.0
+2026-04-19 11:31:05 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.INPUT_REQUIRED, interrupted: True
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Workflow interrupted: travel_flow_1.0
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Extracted component_id from interaction_data: questioner
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Extracted single component_id: questioner
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Extracted interaction_value from interaction_data: type=str
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Task interrupted: workflow=travel_flow_1.0, state_key=travel_flow_1_0, component_id=questioner, interaction_value_type=str
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Found first interrupt: component_id=questioner
+2026-04-19 11:31:05 | common | default_trace_id | INFO | Workflow has 1 interrupts, returning only the first one for streaming
+2026-04-19 11:31:05 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'list'>, True
+2026-04-19 11:31:05 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Input>: [SystemMessage(role='system', content='你是一个意图分类助手，擅长判断用户的输入属于哪个分类。\n当用户输入没有明确意图或者你无法判断用户输入意图时请选择 分类0。\n以下是给定的意图分类列表：\n分类0：意图不明\n分类1：查询某地的天气情况、温度、气象信息，了解天气状况\n分类2：查询股票价格、股市行情、股票走势等金融信息\n分类3：规划旅行路线、推荐旅游景点、提供旅行建议\n\n请根据上述要求判断用户输入意图分类，输出要求如下：\n直接以JSON格式输出分类ID，不进行任何解释。JSON格式如下：\n {"result": int}', name=None), UserMessage(role='user', content='用户与助手的对话历史：\n用户: 查询天气\n助手: 请提供地点，如城市名称\n用户: 查看股票\n助手: 请提供股票代码，如 AAPL、TSLA\n用户: 查询北京天气\n助手: 北京\n用户: 查看AAPL股票\n助手: AAPL\n用户: 规划旅行\n助手: 请提供目的地，如城市或景点名称\n\n当前输入：\n去巴黎旅行', name=None)]
+2026-04-19 11:31:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] <LLM Output>: {"result": 3}
+2026-04-19 11:31:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] get intent: travel_flow
+2026-04-19 11:31:09 | common | default_trace_id | INFO | [demo-jump-recovery-001] success to create task for intent: travel_flow
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Multi workflow mode: detected 旅行规划
+2026-04-19 11:31:09 | common | default_trace_id | INFO | _find_interrupted_task: workflow=旅行规划, state={'interrupted_tasks': {'travel_flow_1_0': {'task': {'agent_id': None, 'task_id': 'workflow_1224c06e-58fb-446d-b1ad-d7c0c86dc917', 'task_type': <TaskType.WORKFLOW: 'workflow'>, 'description': None, 'status': <TaskStatus.INTERRUPTED: 6>, 'metadata': {}, 'input': {'target_id': 'travel_flow_1.0', 'target_name': '旅行规划', 'arguments': {'query': '规划旅行'}}, 'result': None, 'dependencies': [], 'dependents': set(), 'parent_task_id': None, 'child_task_ids': set(), 'group_id': None, 'level': 0}, 'component_id': 'questioner', 'last_interaction_value': '请提供目的地，如城市或景点名称'}}}
+2026-04-19 11:31:09 | common | default_trace_id | INFO | _find_interrupted_task: interrupted_tasks keys=['travel_flow_1_0']
+2026-04-19 11:31:09 | common | default_trace_id | INFO | _find_interrupted_task: possible_ids=['travel_flow_1_0', 'travel_flow']
+2026-04-19 11:31:09 | common | default_trace_id | INFO | _find_interrupted_task: Found interrupted task for travel_flow_1_0
+2026-04-19 11:31:09 | common | default_trace_id | INFO | last_interaction_value is str (human interaction), will resume task
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Found interrupted task for workflow 旅行规划, resuming
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Added user message: 去巴黎旅行
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Handling resume task: task_id=workflow_1224c06e-58fb-446d-b1ad-d7c0c86dc917
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Target workflow interrupted component_id: questioner
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Created InteractiveInput for resume: component_id=questioner, query=去巴黎旅行
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Trying to find workflow from resource_mgr: travel_flow_1.0
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Found workflow from resource_mgr: True
+2026-04-19 11:31:09 | common | default_trace_id | INFO | Starting workflow: travel_flow_1.0
+2026-04-19 11:31:09 | common | default_trace_id | INFO | TaskQueue: Registered task for demo-jump-recovery-001, target=travel_flow_1.0
+2026-04-19 11:31:17 | common | default_trace_id | INFO | TaskQueue: Unregistered task for demo-jump-recovery-001
+2026-04-19 11:31:17 | common | default_trace_id | INFO | Workflow result state: WorkflowExecutionState.COMPLETED, interrupted: False
+2026-04-19 11:31:17 | common | default_trace_id | INFO | Workflow completed: travel_flow_1.0
+2026-04-19 11:31:17 | common | default_trace_id | INFO | Cleared interrupted state for workflow: travel_flow_1.0, state_key: travel_flow_1_0
+2026-04-19 11:31:17 | common | default_trace_id | INFO | BaseController: handle_event returned: <class 'dict'>, True
+2026-04-19 17:54:32 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 17:54:33 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 17:54:35 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 17:54:54 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 17:54:55 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 17:54:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3faf3c59acc34d34aaf9879a2a7bdab5.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 17:54:58 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 17:57:24 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 17:57:25 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 17:57:26 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=6d5a9556ac2b4554bc7725b310015647.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 17:57:27 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 18:00:58 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 18:00:59 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 18:01:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=53148b96671d48cb8ec4f1e2ded88c83.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 18:01:02 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 18:10:20 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 18:10:21 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 18:10:22 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=4575a1cfb154416498d1076029c524f7.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=default_model, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Model setup complete
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=transfer_flow, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=invest_flow, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=balance_flow, changed from [] to [GLOBAL]
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Workflows setup complete: ['转账服务', '理财服务', '余额查询']
+2026-04-19 18:10:23 | common | default_trace_id | INFO | Agent created
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Using custom header and query authorization for calculator
+2026-04-19 18:10:24 | common | default_trace_id | INFO | SSE client connected successfully to http://127.0.0.1:3001/sse
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Retrieved 5 tools from SSE server
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.add, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.subtract, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.multiply, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.divide, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.power, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp, changed from [] to [GLOBAL]
+2026-04-19 18:10:24 | common | default_trace_id | INFO | MCP server 'calculator_mcp' added successfully
+2026-04-19 18:10:24 | common | default_trace_id | WARNING | Skills directory 'd:\work\code-proj\openjiuwen-demo\jiuwen-core\recact-example\skills' does not exist
+2026-04-19 18:10:33 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:10:33 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=11
+2026-04-19 18:10:38 | common | default_trace_id | INFO | [LLM] <<< response: content_len=0, tool_call_count=1, tokens={input=1581, output=59}
+2026-04-19 18:10:38 | common | default_trace_id | INFO | Executing tool: add with args: {"a": 1, "b": 1}
+2026-04-19 18:10:38 | common | default_trace_id | INFO | Calling tool 'add' via SSE with arguments: {'a': 1.0, 'b': 1.0}
+2026-04-19 18:10:38 | common | default_trace_id | INFO | Tool 'add' call completed via SSE
+2026-04-19 18:10:38 | common | default_trace_id | INFO | ReAct iteration 2/20
+2026-04-19 18:10:38 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=11
+2026-04-19 18:10:39 | common | default_trace_id | INFO | [LLM] <<< response: content_len=13, tool_call_count=0, tokens={input=1637, output=39}
+2026-04-19 18:12:57 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:12:57 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=6, tool_count=11
+2026-04-19 18:13:04 | common | default_trace_id | INFO | [LLM] <<< response: content_len=445, tool_call_count=0, tokens={input=1670, output=318}
+2026-04-19 18:13:39 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:13:39 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=8, tool_count=11
+2026-04-19 18:13:41 | common | default_trace_id | INFO | [LLM] <<< response: content_len=0, tool_call_count=1, tokens={input=1873, output=67}
+2026-04-19 18:13:41 | common | default_trace_id | INFO | Executing tool: 转账服务 with args: {}
+2026-04-19 18:14:13 | common | default_trace_id | INFO | Resuming ReAct from iteration 1
+2026-04-19 18:14:13 | common | default_trace_id | INFO | Executing tool: 转账服务 with args: user_inputs={'questioner': '我要理财'} raw_inputs=None
+2026-04-19 18:14:13 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-19 18:14:13 | common | default_trace_id | WARNING | Ignoring undefined fields for GraphEvent: error_msg
+2026-04-19 18:14:13 | common | default_trace_id | ERROR | Workflow execution error: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-19 18:14:13 | common | default_trace_id | ERROR | Ability execution error: [120001] Workflow execution error: [101072] component questioner_input is invalid, reason: question_content is empty and no extractable fields are configured
+2026-04-19 18:14:13 | common | default_trace_id | INFO | ReAct iteration 2/20
+2026-04-19 18:14:13 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=13, tool_count=11
+2026-04-19 18:14:15 | common | default_trace_id | INFO | [LLM] <<< response: content_len=0, tool_call_count=1, tokens={input=1974, output=32}
+2026-04-19 18:14:15 | common | default_trace_id | INFO | Executing tool: 理财服务 with args: {}
+2026-04-19 18:14:30 | common | default_trace_id | INFO | Resuming ReAct from iteration 2
+2026-04-19 18:14:30 | common | default_trace_id | INFO | Executing tool: 理财服务 with args: user_inputs={'questioner': '查询余额'} raw_inputs=None
+2026-04-19 18:18:23 | common | default_trace_id | INFO | Resuming ReAct from iteration 2
+2026-04-19 18:18:23 | common | default_trace_id | INFO | Executing tool: 理财服务 with args: user_inputs={'questioner': '帮我review这段代码: def add(a, b): return a + b'} raw_inputs=None
+2026-04-19 18:19:15 | common | default_trace_id | ERROR | 处理输入时发生错误: 
+2026-04-19 18:19:17 | common | default_trace_id | INFO | Removed resource. resource_id=calculator_mcp, removed_tags=['__global__']
+2026-04-19 18:19:24 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 18:19:25 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 18:19:29 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 18:19:30 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 18:19:31 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=3c0e6f182307487db41a31e547fadbf8.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=default_model, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Model setup complete
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=transfer_flow, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=invest_flow, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=balance_flow, changed from [] to [GLOBAL]
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Workflows setup complete: ['转账服务', '理财服务', '余额查询']
+2026-04-19 18:19:33 | common | default_trace_id | INFO | Agent created
+2026-04-19 18:19:34 | common | default_trace_id | INFO | Using custom header and query authorization for calculator
+2026-04-19 18:19:35 | common | default_trace_id | INFO | SSE client connected successfully to http://127.0.0.1:3001/sse
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Retrieved 5 tools from SSE server
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.add, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.subtract, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.multiply, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.divide, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.power, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp, changed from [] to [GLOBAL]
+2026-04-19 18:19:35 | common | default_trace_id | INFO | MCP server 'calculator_mcp' added successfully
+2026-04-19 18:19:35 | common | default_trace_id | WARNING | Skills directory 'd:\work\code-proj\openjiuwen-demo\jiuwen-core\recact-example\skills' does not exist
+2026-04-19 18:19:37 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:19:37 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=11
+2026-04-19 18:19:50 | common | default_trace_id | INFO | [LLM] <<< response: content_len=776, tool_call_count=0, tokens={input=1591, output=596}
+2026-04-19 18:25:12 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:25:12 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=11
+2026-04-19 18:25:17 | common | default_trace_id | INFO | [LLM] <<< response: content_len=286, tool_call_count=0, tokens={input=1923, output=224}
+2026-04-19 18:35:56 | common | default_trace_id | ERROR | 处理输入时发生错误: 
+2026-04-19 18:35:57 | common | default_trace_id | INFO | Removed resource. resource_id=calculator_mcp, removed_tags=['__global__']
+2026-04-19 18:36:04 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-04-19 18:36:05 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-04-19 18:36:06 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-04-19 18:36:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Starting ReAct Agent with Skills, MCP and Workflow...
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.code.execute_code, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.code.execute_code_stream, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.read_file, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.read_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.write_file, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.upload_file, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.upload_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.download_file, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.download_file_stream, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.list_files, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.list_directories, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.fs.search_files, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.shell.execute_cmd, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.shell.execute_cmd_stream, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=31b9dfdd589943ff825d8128b4702258.shell.execute_cmd_background, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | System operation setup complete
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=default_model, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Model setup complete
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=transfer_flow, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=invest_flow, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=balance_flow, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Workflows setup complete: ['转账服务', '理财服务', '余额查询']
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Agent created
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Using custom header and query authorization for calculator
+2026-04-19 18:36:08 | common | default_trace_id | INFO | SSE client connected successfully to http://127.0.0.1:3001/sse
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Retrieved 5 tools from SSE server
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.add, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.subtract, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.multiply, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.divide, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp.calculator.power, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | Added GLOBAL tag to resource. resource_id=calculator_mcp, changed from [] to [GLOBAL]
+2026-04-19 18:36:08 | common | default_trace_id | INFO | MCP server 'calculator_mcp' added successfully
+2026-04-19 18:36:09 | common | default_trace_id | INFO | Skills registered from 'd:\work\code-proj\openjiuwen-demo\jiuwen-core\tools\skills'
+2026-04-19 18:37:36 | common | default_trace_id | INFO | ReAct iteration 1/20
+2026-04-19 18:37:36 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=2, tool_count=11
+2026-04-19 18:37:41 | common | default_trace_id | INFO | [LLM] <<< response: content_len=0, tool_call_count=1, tokens={input=1752, output=83}
+2026-04-19 18:37:41 | common | default_trace_id | INFO | Executing tool: read_file with args: {"path": "D:\\work\\code-proj\\openjiuwen-demo\\jiuwen-core\\tools\\skills\\python-review\\SKILL.md"}
+2026-04-19 18:37:41 | common | default_trace_id | INFO | ReAct iteration 2/20
+2026-04-19 18:37:41 | common | default_trace_id | INFO | [LLM] >>> request: msg_count=4, tool_count=11
+2026-04-19 18:37:47 | common | default_trace_id | INFO | [LLM] <<< response: content_len=333, tool_call_count=0, tokens={input=2970, output=296}
+2026-05-17 15:17:53 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:17:54 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:17:56 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:21:50 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:21:50 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:21:52 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:28:43 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:28:43 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:28:45 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:30:51 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:30:51 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:30:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:31:13 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:31:13 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:31:15 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:33:01 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:33:01 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:33:03 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:40:22 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:40:22 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:40:24 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:40:51 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:40:51 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:40:53 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 15:42:58 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 15:42:58 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 15:43:01 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 16:18:10 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 16:18:10 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 16:18:12 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 16:18:13 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 16:19:11 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 16:19:11 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 16:19:14 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 16:19:36 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 16:19:36 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 16:19:38 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 16:19:39 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 16:23:12 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 16:23:12 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 16:23:15 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 16:23:16 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 17:44:33 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 17:44:33 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 17:44:36 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-05-17 17:45:31 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-05-17 17:45:31 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-05-17 17:45:33 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif

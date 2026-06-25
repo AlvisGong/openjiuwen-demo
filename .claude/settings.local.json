@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python workflow_questioner.py)",
+      "Bash(timeout 120 python workflow_multi_agent.py)",
+      "Bash(python workflow_questioner.py -m demo)",
+      "Bash(python mcp_server.py)",
+      "Bash(python mcp_tool.py)",
+      "Bash(python jiuwen-core/tools/mcp_tool.py)",
+      "Bash(python weather_server.py)",
+      "Bash(curl -s http://127.0.0.1:8000/?location=beijing)",
+      "Bash(python react_api_tool.py)",
+      "Bash(python react_mcp_tool.py)",
+      "Bash(python react_skill_tool.py)",
+      "Bash(curl -s -w \"%{http_code}\" --connect-timeout 5 \"https://api.modelarts-maas.com/openai/v1/models\" -H \"Authorization: Bearer TdjVSA2nqjP8pQRpf-A5YVCSjgLx9FabIBxyN9B5TI7ZdcTMyhSxmzXzzyPr6xEWOylP7SR4BI8OAPsJwQYtfg\")",
+      "Bash(python -c \"from openjiuwen.core.foundation.tool import *; import inspect; for name, obj in inspect.getmembers\\(inspect.getmodule\\(RestfulApi\\)\\): print\\(name, type\\(obj\\)\\) if isinstance\\(obj, type\\) else None\")",
+      "Bash(python -c ' *)",
+      "Bash(python react_skill_tool_class.py)",
+      "WebSearch",
+      "WebFetch(domain:www.google.com)",
+      "Bash(python workflow_jump_demo.py --mode demo)",
+      "Bash(python context/context_engine_demo.py)",
+      "Bash(python memory/memory_engine_demo.py)",
+      "Bash(pip install *)",
+      "Bash(python recact-example/react_agent_demo.py)",
+      "Bash(timeout 30 python -c ' *)"
+    ]
+  }
+}

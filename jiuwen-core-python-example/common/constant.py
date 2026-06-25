@@ -5,7 +5,7 @@
 
 API_BASE = "https://coding.dashscope.aliyuncs.com/v1";
 API_BL_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1";
-API_KEY = "sk-sp-a0151e890aa646f28663f7ea46dff43f";
-API_BL_KEY = "sk-dcf7f2afb3e241509ac9997414c50d0b";
+API_KEY = "xxx";
+API_BL_KEY = "xxx";
 MODEL_NAME = "MiniMax-M2.5";
 MODEL_PROVIDER = "OpenAI";
