@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Agent D 费用审核 A2A 全流程（含对话 + 嵌套 output 传递）</title>
+<style>
+  @page { size: landscape; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 800px;
+    background: #0d1117;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    color: #e6edf3;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    height: 44px; flex-shrink: 0;
+    background: linear-gradient(135deg, #1a2332, #0d1117);
+    border-bottom: 2px solid #30363d;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+  }
+  .header h1 { font-size: 20px; color: #f85149; }
+  .header .sub { font-size: 11px; color: #8b949e; }
+  .content { flex: 1; display: flex; padding: 6px 12px; gap: 8px; overflow: hidden; }
+  .left-panel { width: 580px; display: flex; flex-direction: column; gap: 4px; }
+  .mid-panel { width: 330px; display: flex; flex-direction: column; gap: 4px; }
+  .right-panel { width: 330px; display: flex; flex-direction: column; gap: 4px; }
+
+  /* 对话区 */
+  .dialog-box {
+    background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 6px 10px;
+    flex: 1; overflow-y: auto;
+  }
+  .dialog-box h3 { font-size: 12px; color: #58a6ff; margin-bottom: 4px; }
+  .turn { margin-bottom: 6px; padding: 4px 8px; border-radius: 4px; font-size: 10.5px; line-height: 1.45; }
+  .turn-user { background: #2e1a2e; border-left: 3px solid #ec6cb9; }
+  .turn-a { background: #0e2a1e; border-left: 3px solid #3fb950; }
+  .turn-b { background: #1a1a2e; border-left: 3px solid #a371f7; }
+  .turn-d { background: #2e1a1a; border-left: 3px solid #f85149; }
+  .turn-interrupt { background: #2e2a0e; border-left: 3px solid #d29922; }
+  .turn .role { font-weight: bold; font-size: 10px; }
+  .turn .code { font-family: 'Consolas', monospace; font-size: 9.5px; color: #d2a8ff; }
+  .turn .resp { font-family: 'Consolas', monospace; font-size: 9.5px; color: #3fb950; }
+  .turn .note { font-size: 9px; color: #8b949e; }
+
+  /* 时间线 */
+  .timeline { flex: 1; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+  .step { display: flex; align-items: stretch; gap: 5px; min-height: 0; }
+  .step-num {
+    width: 22px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: bold; color: #fff;
+    border-radius: 50%;
+  }
+  .step-body {
+    flex: 1; border-radius: 4px; padding: 3px 7px;
+    display: flex; align-items: center;
+    font-size: 10.5px; line-height: 1.35;
+  }
+  .step-body .code { font-family: 'Consolas', monospace; font-size: 9.5px; }
+  .phase-label { font-size: 9.5px; font-weight: bold; padding: 2px 0; border-top: 1px solid #30363d; margin-top: 2px; }
+
+  .c-a  { background: #0e2a1e; border-left: 3px solid #3fb950; } .c-a .step-num { background: #3fb950; }
+  .c-b  { background: #1a1a2e; border-left: 3px solid #a371f7; } .c-b .step-num { background: #a371f7; }
+  .c-d  { background: #2e1a1a; border-left: 3px solid #f85149; } .c-d .step-num { background: #f85149; }
+  .c-user { background: #2e1a2e; border-left: 3px solid #ec6cb9; } .c-user .step-num { background: #ec6cb9; }
+  .c-sys { background: #1e1a2e; border-left: 3px solid #58a6ff; } .c-sys .step-num { background: #58a6ff; }
+  .c-interrupt { background: #2e2a0e; border-left: 3px solid #d29922; } .c-interrupt .step-num { background: #d29922; }
+
+  .panel-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 5px 9px; }
+  .panel-box h3 { font-size: 11px; margin-bottom: 3px; }
+  .panel-box ul { list-style: none; }
+  .panel-box li { font-size: 9.5px; line-height: 1.5; color: #8b949e; }
+  .panel-box li strong { color: #e6edf3; }
+  .tag { display: inline-block; padding: 1px 4px; border-radius: 2px; font-size: 8.5px; font-weight: bold; }
+  .arch-box { flex-shrink: 0; height: 180px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 3px; display: flex; align-items: center; justify-content: center; }
+  .arch-svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Agent D 费用审核 A2A 全流程</h1>
+  <div class="sub">超标费用人工审批 + 嵌套 output 传递 (End 无 responseTemplate) | 两轮对话：发起 → 中断确认 → 恢复 → LLM报告</div>
+</div>
+
+<div class="content">
+
+  <!-- ============ 左侧: 对话轮次 ============ -->
+  <div class="left-panel">
+    <div class="dialog-box">
+      <h3>对话轮次（conversation_id = "exp-1"）</h3>
+
+      <!-- ===== Round 1: 发起费用审核 ===== -->
+      <div class="turn turn-user">
+        <div class="role" style="color:#ec6cb9;">▶ Round 1 — 用户 → Agent A</div>
+        <div class="code">POST /v1/query
+{
+  "conversation_id": "exp-1",
+  "message": "Review expense claim WF-001: hotel, unit_price=800, quantity=2, total=1600, currency=CNY",
+  "stream": false
+}</div>
+      </div>
+
+      <div class="turn turn-a">
+        <div class="role" style="color:#3fb950;">Agent A (ReActAgent)</div>
+        <div class="note">system-prompt: "For every user request, immediately call delegate_to_agentb"<br>→ LLM: tool_call(delegate_to_agentb, {message: "Review expense claim WF-001..."})</div>
+        <div class="note">A2aDelegateRail.resolveInterrupt(resumeInput=null)<br>→ interrupt(context:{agentName:"agentb", _interrupt_kind:"a2a_delegate"})</div>
+      </div>
+
+      <div class="turn turn-b">
+        <div class="role" style="color:#a371f7;">Agent B (ReActAgent)</div>
+        <div class="note">system-prompt: "For expense requests, extract claim_id, category, unit_price, quantity, total, currency"<br>→ LLM: tool_call(review_expense_streaming, {claim_id:"WF-001", category:"hotel", unit_price:800, quantity:2, total:1600, currency:"CNY"})</div>
+        <div class="note">BToDDelegateRail → canonicalClaim(toolCall) → JSON<br>→ interrupt(agentName:"agentd-streaming", _interrupt_kind:"a2a_delegate")</div>
+        <div class="note">→ POST :18093/a2a (A2A JSON-RPC, message = 结构化 JSON)</div>
+      </div>
+
+      <div class="turn turn-d">
+        <div class="role" style="color:#f85149;">Agent D (WorkflowAgent)</div>
+        <div class="note">Workflow: start → check_policy(ExpensePolicyTool)</div>
+        <div class="code">LIMITS = {hotel: 600, meal: 300, transport: 1000, other: 1000}
+unit_price=800 > limit=600 → requires_approval=true
+policy_status = "OVER_LIMIT"</div>
+        <div class="note">→ route(BranchComponent) → manual_approval</div>
+      </div>
+
+      <div class="turn turn-interrupt">
+        <div class="role" style="color:#d29922;">⏸ 中断 (INPUT_REQUIRED)</div>
+        <div class="code">ManualApprovalComponent.invoke():
+  question = "Agent D expense review requires manual approval for WF-001
+    because it exceeds policy. Reply 'approved' to approve or provide
+    a rejection reason. Details: claim WF-001: hotel unit price 800.00 CNY,
+    policy limit 600.00 CNY, total 1600.00 CNY"
+  session.interact(question) → Workflow 暂停</div>
+        <div class="note">中断冒泡: D Orchestrator (ask_user → 透传) → Task INPUT_REQUIRED<br>→ D→B→A 各级 saveShadow → HTTP 200</div>
+      </div>
+
+      <div class="turn turn-a">
+        <div class="role" style="color:#3fb950;">◀ Round 1 响应 — Agent A → 用户</div>
+        <div class="resp">HTTP 200
+{
+  "result": {
+    "role": "assistant",
+    "_interrupt": {
+      "type": "__interaction__",
+      "state": "input_required",
+      "message": "Agent D expense review requires manual approval for WF-001...",
+      "items": [{"toolCallId":"call_xxx", "toolName":"delegate_to_agentb", "message":"..."}]
+    },
+    "content": "Agent D expense review requires manual approval for WF-001..."
+  },
+  "conversation_id": "exp-1"
+}</div>
+        <div class="note">context 中 _interrupt_kind/agentName 已被 publicInterrupt 剥离，用户只看到 message</div>
+      </div>
+
+      <!-- ===== Round 2: 用户确认 → 恢复 → 最终结果 ===== -->
+      <div class="turn turn-user">
+        <div class="role" style="color:#ec6cb9;">▶ Round 2 — 用户 → Agent A (恢复)</div>
+        <div class="code">POST /v1/query
+{
+  "conversation_id": "exp-1",
+  "message": "approved",
+  "stream": false
+}</div>
+        <div class="note">使用同一 conversation_id, Orchestrator 检测到 shadow Task → 嵌套恢复</div>
+      </div>
+
+      <div class="turn turn-sys" style="background:#1e1a2e; border-left:3px solid #58a6ff; padding:4px 8px; border-radius:4px; margin-bottom:6px; font-size:10.5px; line-height:1.45;">
+        <div class="role" style="color:#58a6ff;">嵌套恢复链</div>
+        <div class="note">A Orchestrator syncResumePending → resume(A shadow: 存 B taskId)<br>→ A2A callOutcome(taskId=B's, message="approved") → B Orchestrator resume<br>→ B Orchestrator syncResumePending → resume(B shadow: 存 D taskId)<br>→ A2A callOutcome(taskId=D's, message="approved") → Agent D</div>
+      </div>
+
+      <div class="turn turn-d">
+        <div class="role" style="color:#f85149;">Agent D 恢复执行</div>
+        <div class="note">findStoredInterrupt(task) → 恢复中断上下文<br>session.interact() 返回 "approved"</div>
+        <div class="note">→ manual_approval.user_response = "approved"<br>→ final_response (LLMComponent):</div>
+        <div class="code">system: "You format Agent D's final expense approval report..."
+user:   "claim_id=WF-001; policy_status=OVER_LIMIT;
+         approval_decision=approved; summary=claim WF-001: hotel..."
+→ glm-5.2 生成: "Claim WF-001 reviewed: hotel expense at 800 CNY/night
+  exceeds policy limit (600 CNY). Approved via manual review. Total: 1600 CNY."</div>
+      </div>
+
+      <div class="turn turn-d" style="background:#2e1a1a; border-left:3px solid #f0883e;">
+        <div class="role" style="color:#f0883e;">End 节点 (无 responseTemplate) → 嵌套 output</div>
+        <div class="code">workflow.setEndComp("end", new End(),
+  Map.of(
+    "claim_id",       "${check_policy.data.claim_id}",         // "WF-001"
+    "policy_status",  "${check_policy.data.policy_status}",   // "OVER_LIMIT"
+    "manual_decision","${manual_approval.user_response}",     // "approved"
+    "auto_decision",  "${auto_approve.data.decision}",        // null (未走此分支)
+    "llm_report",     "${final_response.text}",               // LLM 生成的报告
+    "auto_report",    "${check_policy.data.summary}"           // 策略摘要
+  ), null);  ← 第4个参数 null = 无 responseTemplate</div>
+        <div class="note">→ output = 嵌套 Map 对象 (非简单字符串)<br>→ WorkflowOutput.getResult() 返回此 Map</div>
+      </div>
+
+      <div class="turn turn-b" style="background:#1a1a2e; border-left:3px solid #f0883e;">
+        <div class="role" style="color:#f0883e;">嵌套 output 传递路径 D → B → A</div>
+        <div class="code">① D: Runner → WorkflowOutput{result: 嵌套Map{claim_id, policy_status, ...}}
+
+② D: JiuwenCoreAgentHandler.toQueryResponse(rawResult):
+   rawResult instanceof WorkflowOutput → toQueryResponse(workflowOutput.getResult(), convId)
+   → getResult() 返回嵌套 Map
+   → extractContent(map, ["output","content","response","result","data","payload"], true)
+   → INVOKE_CONTENT_KEYS 中 "output" 命中 → 提取嵌套对象内容
+   → QueryResponse{content: 提取后的文本}
+
+③ D → A2A SDK: Task COMPLETED, parts = [TextPart(content)]
+
+④ B: A2ARemoteAgentClient → RemoteCallOutcome(COMPLETED, result=文本)
+   → B BatchCoordinator applyOutcome: member.result = 文本
+   → B Orchestrator buildBatchResumeRequest: metadata.remoteToolResults = {toolCallId: 文本}
+   → B BToDDelegateRail.resolveInterrupt(resumeInput=文本): reject(resumeInput)
+   → B LLM 整理 → B Task COMPLETED
+
+⑤ A: A2ARemoteAgentClient → RemoteCallOutcome(COMPLETED, result=B整理后的文本)
+   → A Orchestrator buildBatchResumeRequest: metadata.remoteToolResults = {toolCallId: 文本}
+   → A A2aDelegateRail.resolveInterrupt(resumeInput=文本): reject(resumeInput)
+   → A LLM: "return Agent B's tool result verbatim"</div>
+        <div class="note">关键: End 无 responseTemplate 时, output 是嵌套 Map;<br>
+          JiuwenCoreAgentHandler 通过 INVOKE_CONTENT_KEYS 的 "output" key 提取内容;<br>
+          extractContent 递归解析嵌套对象, 最终提取出 LLM 报告文本;<br>
+          文本经 A2A Task → RemoteCallOutcome → remoteToolResults → Rail reject → LLM 逐层传递</div>
+      </div>
+
+      <div class="turn turn-a">
+        <div class="role" style="color:#3fb950;">◀ Round 2 响应 — Agent A → 用户 (最终结果)</div>
+        <div class="resp">HTTP 200
+{
+  "result": {
+    "role": "assistant",
+    "content": "Claim WF-001 reviewed: hotel expense at 800 CNY/night
+      exceeds policy limit (600 CNY). Approved via manual review.
+      Total: 1600 CNY."
+  },
+  "conversation_id": "exp-1"
+}</div>
+        <div class="note">Agent A 的 system-prompt: "return Agent B's tool result verbatim; do not summarize"<br>→ LLM 原样输出 Agent B 透传的结果</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ 中间: 时间线 ============ -->
+  <div class="mid-panel">
+    <div class="timeline">
+
+      <div class="phase-label" style="color:#ec6cb9;">▎Round 1: 发起费用审核</div>
+
+      <div class="step"><div class="c-user step-num">1</div><div class="c-user step-body">用户 → A: POST /v1/query "Review expense WF-001..."</div></div>
+      <div class="step"><div class="c-a step-num">2</div><div class="c-a step-body">A: LLM → tool_call(delegate_to_agentb) → A2aDelegateRail interrupt(agentb)</div></div>
+      <div class="step"><div class="c-sys step-num">3</div><div class="c-sys step-body">A Orchestrator → batchCoordinator → POST :18091/a2a → B</div></div>
+      <div class="step"><div class="c-b step-num">4</div><div class="c-b step-body">B: LLM → tool_call(review_expense_streaming, {claim_id,category,...})</div></div>
+      <div class="step"><div class="c-b step-num">5</div><div class="c-b step-body">BToDDelegateRail: canonicalClaim → JSON → interrupt(agentd-streaming)</div></div>
+      <div class="step"><div class="c-sys step-num">6</div><div class="c-sys step-body">B Orchestrator → POST :18093/a2a → D</div></div>
+      <div class="step"><div class="c-d step-num">7</div><div class="c-d step-body">D: start → check_policy → unit_price=800 > 600 → OVER_LIMIT</div></div>
+      <div class="step"><div class="c-d step-num">8</div><div class="c-d step-body">D: route → manual_approval → session.interact() → 中断</div></div>
+      <div class="step"><div class="c-interrupt step-num">9</div><div class="c-interrupt step-body">中断冒泡 D→B→A (各级 saveShadow) → 用户收到 INPUT_REQUIRED</div></div>
+
+      <div class="phase-label" style="color:#3fb950;">▎Round 2: 确认 → 恢复 → 结果</div>
+
+      <div class="step"><div class="c-user step-num">10</div><div class="c-user step-body">用户 → A: POST /v1/query "approved" (同 conversation_id)</div></div>
+      <div class="step"><div class="c-sys step-num">11</div><div class="c-sys step-body">嵌套恢复: A.resume → B.resume → D.resume (逐级 shadow Task)</div></div>
+      <div class="step"><div class="c-d step-num">12</div><div class="c-d step-body">D: session.interact() 返回 "approved" → final_response(LLM)</div></div>
+      <div class="step"><div class="c-d step-num">13</div><div class="c-d step-body">D: glm-5.2 生成报告 → End(无template) → 嵌套 output Map</div></div>
+      <div class="step"><div class="c-sys step-num" style="background:#f0883e;">14</div><div class="c-sys step-body" style="background:#2e2a0e; border-left:3px solid #f0883e;">嵌套 output 传递: WorkflowOutput → toQueryResponse → extractContent("output") → 文本 → A2A Task COMPLETED</div></div>
+      <div class="step"><div class="c-sys step-num">15</div><div class="c-sys step-body">B: RemoteCallOutcome → reject → B LLM 整理 → B COMPLETED</div></div>
+      <div class="step"><div class="c-sys step-num">16</div><div class="c-sys step-body">A: RemoteCallOutcome → reject → A LLM verbatim → HTTP 200</div></div>
+      <div class="step"><div class="c-user step-num">17</div><div class="c-user step-body">用户收到最终报告: "Claim WF-001 reviewed... Approved via manual review."</div></div>
+
+      <div class="phase-label" style="color:#3fb950;">▎对比: 合规路径 (unit_price ≤ 600)</div>
+      <div class="step"><div class="c-d step-num" style="background:#3fb950;">*</div><div class="c-d step-body" style="background:#0e2a1e; border-left:3px solid #3fb950;">check_policy → COMPLIANT → auto_approve({decision:"auto-approved"}) → End → 无中断, 直接完成 → D→B→A→User</div></div>
+
+    </div>
+  </div>
+
+  <!-- ============ 右侧: 架构图 + 面板 ============ -->
+  <div class="right-panel">
+
+    <div class="arch-box">
+      <svg class="arch-svg" viewBox="0 0 330 170" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="45" height="20" rx="3" fill="#2e1a2e" stroke="#ec6cb9" stroke-width="1.5"/>
+        <text x="25" y="16" text-anchor="middle" fill="#ec6cb9" font-size="8" font-weight="bold">用户</text>
+        <rect x="70" y="3" width="55" height="20" rx="3" fill="#0e2a1e" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="97" y="16" text-anchor="middle" fill="#3fb950" font-size="7" font-weight="bold">A :18090</text>
+        <rect x="150" y="3" width="55" height="20" rx="3" fill="#1a1a2e" stroke="#a371f7" stroke-width="1.5"/>
+        <text x="177" y="16" text-anchor="middle" fill="#a371f7" font-size="7" font-weight="bold">B :18091</text>
+        <rect x="230" y="3" width="55" height="20" rx="3" fill="#2e1a1a" stroke="#f85149" stroke-width="1.5"/>
+        <text x="257" y="16" text-anchor="middle" fill="#f85149" font-size="7" font-weight="bold">D :18093</text>
+        <line x1="48" y1="13" x2="65" y2="13" stroke="#ec6cb9" stroke-width="1" marker-end="url(#p1)"/>
+        <line x1="125" y1="13" x2="145" y2="13" stroke="#58a6ff" stroke-width="1" marker-end="url(#p2)"/>
+        <line x1="205" y1="13" x2="225" y2="13" stroke="#58a6ff" stroke-width="1" marker-end="url(#p2)"/>
+
+        <!-- D Workflow -->
+        <rect x="230" y="32" width="55" height="13" rx="2" fill="#1e1a2e" stroke="#f85149" stroke-width="0.6"/>
+        <text x="257" y="41" text-anchor="middle" fill="#f85149" font-size="6">check_policy</text>
+        <rect x="230" y="50" width="55" height="13" rx="2" fill="#1e1a2e" stroke="#d29922" stroke-width="0.6"/>
+        <text x="257" y="59" text-anchor="middle" fill="#d29922" font-size="6">route</text>
+        <rect x="195" y="68" width="45" height="12" rx="2" fill="#2e2a0e" stroke="#d29922" stroke-width="0.6"/>
+        <text x="217" y="76" text-anchor="middle" fill="#d29922" font-size="5.5">manual_approval</text>
+        <rect x="195" y="84" width="45" height="12" rx="2" fill="#1e1a2e" stroke="#f85149" stroke-width="0.6"/>
+        <text x="217" y="92" text-anchor="middle" fill="#f85149" font-size="5.5">LLM final</text>
+        <rect x="275" y="68" width="40" height="12" rx="2" fill="#0e2a1e" stroke="#3fb950" stroke-width="0.6"/>
+        <text x="295" y="76" text-anchor="middle" fill="#3fb950" font-size="5.5">auto_approve</text>
+        <rect x="230" y="102" width="55" height="13" rx="2" fill="#1e1a2e" stroke="#f0883e" stroke-width="0.8"/>
+        <text x="257" y="111" text-anchor="middle" fill="#f0883e" font-size="6" font-weight="bold">End (no tmpl)</text>
+        <line x1="257" y1="45" x2="257" y2="50" stroke="#f85149" stroke-width="0.8" marker-end="url(#p3)"/>
+        <line x1="245" y1="63" x2="217" y2="68" stroke="#d29922" stroke-width="0.8" marker-end="url(#p3)"/>
+        <line x1="270" y1="63" x2="295" y2="68" stroke="#3fb950" stroke-width="0.8" marker-end="url(#p3)"/>
+        <line x1="217" y1="80" x2="217" y2="84" stroke="#d29922" stroke-width="0.8" marker-end="url(#p3)"/>
+        <line x1="217" y1="96" x2="240" y2="102" stroke="#f85149" stroke-width="0.8" marker-end="url(#p3)"/>
+        <line x1="295" y1="80" x2="270" y2="102" stroke="#3fb950" stroke-width="0.8" marker-end="url(#p3)"/>
+
+        <!-- 路径标注 -->
+        <path d="M 217 68 Q 100 68 25 68 Q 25 80 25 90" fill="none" stroke="#d29922" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#p4)"/>
+        <text x="120" y="66" text-anchor="middle" fill="#d29922" font-size="6">①中断冒泡</text>
+        <path d="M 25 100 Q 120 100 217 100" fill="none" stroke="#3fb950" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#p5)"/>
+        <text x="120" y="113" text-anchor="middle" fill="#3fb950" font-size="6">②恢复 "approved"</text>
+        <path d="M 257 115 Q 120 125 25 125" fill="none" stroke="#f0883e" stroke-width="1.5" marker-end="url(#p6)"/>
+        <text x="140" y="138" text-anchor="middle" fill="#f0883e" font-size="6">③结果回传 (嵌套output→文本)</text>
+        <rect x="40" y="148" width="250" height="12" rx="2" fill="#1e1a2e" stroke="#58a6ff" stroke-width="0.5" stroke-dasharray="2,2"/>
+        <text x="165" y="157" text-anchor="middle" fill="#58a6ff" font-size="5.5">Shadow Tasks: A(存B taskId) + B(存D taskId)</text>
+
+        <defs>
+          <marker id="p1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ec6cb9"/></marker>
+          <marker id="p2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#58a6ff"/></marker>
+          <marker id="p3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f85149"/></marker>
+          <marker id="p4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d29922"/></marker>
+          <marker id="p5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3fb950"/></marker>
+          <marker id="p6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f0883e"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="panel-box">
+      <h3 style="color:#f0883e;">End 无 responseTemplate → 嵌套 output 传递</h3>
+      <ul>
+        <li><strong>End 配置</strong>: <span class="code">setEndComp("end", new End(), Map.of(...), null)</span> — 第4参数 null</li>
+        <li><strong>output 结构</strong>: 嵌套 Map {claim_id, policy_status, manual_decision, llm_report, auto_report}</li>
+        <li><strong>D 侧</strong>: WorkflowOutput.getResult() → 返回嵌套 Map</li>
+        <li><strong>Handler</strong>: <span class="code">rawResult instanceof WorkflowOutput → toQueryResponse(getResult())</span></li>
+        <li><strong>提取</strong>: <span class="code">extractContent(map, INVOKE_CONTENT_KEYS, true)</span></li>
+        <li><strong>INVOKE_CONTENT_KEYS</strong>: ["output", "content", "response", "result", "data", "payload"]</li>
+        <li><strong>"output" 命中</strong>: 递归提取嵌套 Map 中的文本内容</li>
+        <li><strong>shouldUseMapFallback=true</strong>: 无 key 命中时 stringify 整个 Map</li>
+        <li><strong>A2A 传输</strong>: 文本 → Task parts[TextPart] → RemoteCallOutcome.result</li>
+        <li><strong>B/A 侧</strong>: remoteToolResults → Rail reject(resumeInput) → LLM</li>
+      </ul>
+    </div>
+
+    <div class="panel-box">
+      <h3 style="color:#f85149;">ExpensePolicyTool 策略检查</h3>
+      <ul>
+        <li><strong>限额</strong>: hotel=600, meal=300, transport=1000, other=1000</li>
+        <li><strong>判定</strong>: <span class="code">unit_price > limit → requires_approval=true</span></li>
+        <li><strong>本例</strong>: 800 > 600 → <span class="tag" style="background:#d29922;color:#000;">OVER_LIMIT</span></li>
+        <li><strong>合规</strong>: ≤ 600 → <span class="tag" style="background:#3fb950;color:#fff;">COMPLIANT</span> → auto_approve</li>
+      </ul>
+    </div>
+
+    <div class="panel-box">
+      <h3 style="color:#a371f7;">两轮对话对比</h3>
+      <ul>
+        <li><strong>Round 1</strong>: 发起请求 → A→B→D 策略检查 → 超标中断 → 用户收到 INPUT_REQUIRED</li>
+        <li><strong>Round 2</strong>: "approved" → 嵌套恢复 → LLM 报告 → End 嵌套 output → D→B→A → 用户收到报告</li>
+        <li><strong>合规场景</strong>: 无 Round 2, 单轮完成 (auto_approve → End → 直接返回)</li>
+        <li><strong>关键</strong>: 两轮使用同一 conversation_id, Shadow Task 保证状态延续</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

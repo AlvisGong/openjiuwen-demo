@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>A2A Agent 委派与中断恢复全流程</title>
+<style>
+  @page { size: landscape; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    background: #0d1117;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    color: #e6edf3;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    height: 50px; flex-shrink: 0;
+    background: linear-gradient(135deg, #1a2332, #0d1117);
+    border-bottom: 2px solid #30363d;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 30px;
+  }
+  .header h1 { font-size: 22px; color: #58a6ff; }
+  .header .sub { font-size: 13px; color: #8b949e; }
+  .content { flex: 1; display: flex; padding: 12px 20px; gap: 12px; overflow: hidden; }
+  .left-panel { width: 860px; display: flex; flex-direction: column; gap: 6px; }
+  .right-panel { width: 360px; display: flex; flex-direction: column; gap: 6px; }
+
+  /* ---- 时间线 ---- */
+  .timeline { flex: 1; position: relative; display: flex; flex-direction: column; gap: 4px; }
+  .step {
+    display: flex; align-items: stretch; gap: 10px;
+    min-height: 0;
+  }
+  .step-num {
+    width: 28px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold; color: #fff;
+    border-radius: 50%;
+  }
+  .step-body {
+    flex: 1; border-radius: 6px; padding: 5px 10px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; line-height: 1.4;
+  }
+  .step-body .code { font-family: 'Consolas', monospace; font-size: 11px; }
+
+  /* 颜色 */
+  .c-a  { background: #0e2a1e; border-left: 3px solid #3fb950; }
+  .c-a .step-num { background: #3fb950; }
+  .c-b  { background: #1a1a2e; border-left: 3px solid #a371f7; }
+  .c-b .step-num { background: #a371f7; }
+  .c-user { background: #2e1a1a; border-left: 3px solid #f85149; }
+  .c-user .step-num { background: #f85149; }
+  .c-sys { background: #1e1a2e; border-left: 3px solid #58a6ff; }
+  .c-sys .step-num { background: #58a6ff; }
+  .c-interrupt { background: #2e2a0e; border-left: 3px solid #d29922; }
+  .c-interrupt .step-num { background: #d29922; }
+
+  /* ---- 右侧面板 ---- */
+  .panel-box {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .panel-box h3 { font-size: 13px; color: #58a6ff; margin-bottom: 6px; }
+  .panel-box ul { list-style: none; }
+  .panel-box li { font-size: 11px; line-height: 1.6; color: #8b949e; }
+  .panel-box li strong { color: #e6edf3; }
+  .panel-box .tag {
+    display: inline-block; padding: 1px 6px; border-radius: 3px;
+    font-size: 10px; font-weight: bold; margin-left: 4px;
+  }
+
+  /* ---- 架构图 ---- */
+  .arch-box {
+    flex: 1; background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 8px; display: flex; align-items: center; justify-content: center;
+  }
+  .arch-svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>A2A Agent 委派与中断恢复全流程</h1>
+  <div class="sub">以 "What is 1+1?" 为例 — Agent A → Agent B → Calc → 用户确认 → 结果返回</div>
+</div>
+
+<div class="content">
+
+  <!-- ============ 左侧: 时间线 ============ -->
+  <div class="left-panel">
+
+    <!-- ===== 第一行: 请求发起 ===== -->
+    <div class="timeline">
+
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="c-user step-num" style="border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold;flex-shrink:0;">1</div>
+        <div class="c-user step-body">
+          <div>
+            <strong style="color:#f85149;">用户</strong> → Agent A (18090):
+            <span class="code" style="color:#d2a8ff;">POST /v1/query {"conversation_id":"a2a-test-1","message":"What is 1+1?","stream":false}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="c-a step-num">2</div>
+        <div class="c-a step-body">
+          <div>
+            <strong style="color:#3fb950;">Agent A</strong> — system-prompt 指示"必须调用 delegate_to_agentb" → LLM 输出 tool_call(delegate_to_agentb, {message:"What is 1+1?"})
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="c-a step-num">3</div>
+        <div class="c-a step-body">
+          <div>
+            <strong style="color:#3fb950;">A2aDelegateRail</strong> 拦截工具调用 → interrupt(context: {agentName:"agentb", _interrupt_kind:"a2a_delegate"})
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="c-sys step-num">4</div>
+        <div class="c-sys step-body">
+          <div>
+            <strong style="color:#58a6ff;">Orchestrator</strong> isCoordinatorInterrupt() → true (a2a_delegate) → batchCoordinator.execute() → A2ARemoteAgentClient.callOutcome()
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step">
+        <div class="c-sys step-num">5</div>
+        <div class="c-sys step-body">
+          <div>
+            <strong style="color:#58a6ff;">A2A JSON-RPC</strong> POST http://localhost:18091/a2a → Agent B 收到 "What is 1+1?"
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step">
+        <div class="c-b step-num">6</div>
+        <div class="c-b step-body">
+          <div>
+            <strong style="color:#a371f7;">Agent B</strong> — system-prompt 指示"数学题调用 calc" → LLM 输出 tool_call(calc, {expression:"1+1"})
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="step">
+        <div class="c-interrupt step-num">7</div>
+        <div class="c-interrupt step-body">
+          <div>
+            <strong style="color:#d29922;">CalcInterruptRail</strong> resolveInterrupt(resumeInput=null) → interrupt(context:{_interrupt_kind:"ask_user"}, message:"Continue? Reply yes or no.")
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="step">
+        <div class="c-sys step-num">8</div>
+        <div class="c-sys step-body">
+          <div>
+            <strong style="color:#58a6ff;">Orchestrator (B)</strong> isCoordinatorInterrupt() → false (ask_user ≠ a2a_delegate) → <strong style="color:#d29922;">透传</strong> → emitter.requiresInput() → Task = INPUT_REQUIRED
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 9 -->
+      <div class="step">
+        <div class="c-sys step-num">9</div>
+        <div class="c-sys step-body">
+          <div>
+            <strong style="color:#58a6ff;">中断回传</strong> Agent B → A2A SDK → Agent A A2ARemoteAgentClient → BatchCoordinator: saveShadow(WAITING_INPUT) → 构造中断 QueryResponse → HTTP 200
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 10 -->
+      <div class="step">
+        <div class="c-user step-num">10</div>
+        <div class="c-user step-body">
+          <div>
+            <strong style="color:#f85149;">用户</strong> 收到: <span class="code" style="color:#d2a8ff;">"Agent B is ready to calculate 1+1. Continue? Reply yes or no."</span> → 回复 <span class="code" style="color:#3fb950;">"yes"</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 11 -->
+      <div class="step">
+        <div class="c-sys step-num">11</div>
+        <div class="c-sys step-body">
+          <div>
+            <strong style="color:#58a6ff;">恢复</strong> Orchestrator syncResumePending → batchCoordinator.resume(shadow Task) → A2ARemoteAgentClient.callOutcome(taskId=Agent B's taskId, message="yes")
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 12 -->
+      <div class="step">
+        <div class="c-b step-num">12</div>
+        <div class="c-b step-body">
+          <div>
+            <strong style="color:#a371f7;">Agent B</strong> findStoredInterrupt → CalcInterruptRail.resolveInterrupt(resumeInput="yes") → AFFIRMATIVE → calculate("1+1")=2 → reject(result) → LLM: "The result is 2." → Task COMPLETED
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 13 -->
+      <div class="step">
+        <div class="c-a step-num">13</div>
+        <div class="c-a step-body">
+          <div>
+            <strong style="color:#3fb950;">Agent A</strong> 收到远端结果 → buildBatchResumeRequest(remoteToolResults) → A2aDelegateRail.reject(resumeInput) → LLM 原样输出
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 14 -->
+      <div class="step">
+        <div class="c-user step-num">14</div>
+        <div class="c-user step-body">
+          <div>
+            <strong style="color:#f85149;">用户</strong> 收到最终结果: <span class="code" style="color:#3fb950;">"The result of 1+1 is **2**."</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ 右侧: 架构图 + 要点 ============ -->
+  <div class="right-panel">
+
+    <!-- 架构图 -->
+    <div class="arch-box">
+      <svg class="arch-svg" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- User -->
+        <rect x="10" y="10" width="70" height="30" rx="4" fill="#2e1a1a" stroke="#f85149" stroke-width="1.5"/>
+        <text x="45" y="29" text-anchor="middle" fill="#f85149" font-size="11" font-weight="bold">用户</text>
+
+        <!-- Agent A -->
+        <rect x="120" y="10" width="100" height="30" rx="4" fill="#0e2a1e" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="170" y="29" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Agent A :18090</text>
+
+        <!-- Agent B -->
+        <rect x="260" y="10" width="70" height="30" rx="4" fill="#1a1a2e" stroke="#a371f7" stroke-width="1.5"/>
+        <text x="295" y="29" text-anchor="middle" fill="#a371f7" font-size="11" font-weight="bold">Agent B :18091</text>
+
+        <!-- 箭头: User -> A -->
+        <line x1="80" y1="25" x2="115" y2="25" stroke="#f85149" stroke-width="1.5" marker-end="url(#arrowR)"/>
+        <text x="97" y="18" text-anchor="middle" fill="#8b949e" font-size="8">1+1?</text>
+
+        <!-- 箭头: A -> B -->
+        <line x1="220" y1="25" x2="255" y2="25" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arrowB)"/>
+        <text x="237" y="18" text-anchor="middle" fill="#8b949e" font-size="8">A2A</text>
+
+        <!-- Orchestrator A box -->
+        <rect x="120" y="55" width="100" height="24" rx="3" fill="#1e1a2e" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="170" y="71" text-anchor="middle" fill="#58a6ff" font-size="9">Orchestrator</text>
+
+        <!-- Orchestrator B box -->
+        <rect x="260" y="55" width="70" height="24" rx="3" fill="#1e1a2e" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="295" y="71" text-anchor="middle" fill="#58a6ff" font-size="9">Orchestrator</text>
+
+        <!-- Rail A -->
+        <rect x="120" y="92" width="100" height="22" rx="3" fill="#2e2a0e" stroke="#d29922" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="170" y="106" text-anchor="middle" fill="#d29922" font-size="8">A2aDelegateRail</text>
+
+        <!-- Rail B -->
+        <rect x="260" y="92" width="70" height="22" rx="3" fill="#2e2a0e" stroke="#d29922" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="295" y="106" text-anchor="middle" fill="#d29922" font-size="8">CalcInterruptRail</text>
+
+        <!-- 箭头: A Orchestrator -> A Rail -->
+        <line x1="170" y1="79" x2="170" y2="92" stroke="#58a6ff" stroke-width="1" marker-end="url(#arrowB)"/>
+        <!-- 箭头: B Orchestrator -> B Rail -->
+        <line x1="295" y1="79" x2="295" y2="92" stroke="#58a6ff" stroke-width="1" marker-end="url(#arrowB)"/>
+
+        <!-- Interrupt 冒泡线 -->
+        <path d="M 295 114 Q 295 130 170 130 Q 170 140 45 140" fill="none" stroke="#d29922" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowY)"/>
+        <text x="170" y="148" text-anchor="middle" fill="#d29922" font-size="9">中断冒泡 INPUT_REQUIRED</text>
+
+        <!-- Resume 线 -->
+        <path d="M 45 160 Q 170 160 295 160" fill="none" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowG)"/>
+        <text x="170" y="175" text-anchor="middle" fill="#3fb950" font-size="9">恢复 "yes" → 计算结果回传</text>
+
+        <!-- 箭头定义 -->
+        <defs>
+          <marker id="arrowR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f85149"/></marker>
+          <marker id="arrowB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#58a6ff"/></marker>
+          <marker id="arrowY" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d29922"/></marker>
+          <marker id="arrowG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3fb950"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- 中断类型对比 -->
+    <div class="panel-box">
+      <h3>中断类型路由</h3>
+      <ul>
+        <li><span class="tag" style="background:#a371f7;color:#fff;">a2a_delegate</span> A2aDelegateRail 产生 → Orchestrator 拦截 → 远端 A2A 调用</li>
+        <li><span class="tag" style="background:#d29922;color:#000;">ask_user</span> CalcInterruptRail 产生 → Orchestrator 透传 → 直接到达用户</li>
+        <li><strong>分叉点</strong>: isCoordinatorInterrupt() 检查 context._interrupt_kind</li>
+      </ul>
+    </div>
+
+    <!-- 关键组件 -->
+    <div class="panel-box">
+      <h3>关键组件</h3>
+      <ul>
+        <li><strong>A2aDelegateRail</strong> — Agent A 拦截委派工具, 写入 agentName="agentb"</li>
+        <li><strong>CalcInterruptRail</strong> — Agent B 确认后计算, AFFIRMATIVE={"yes","ok",...}</li>
+        <li><strong>BatchCoordinator</strong> — fan-out 远端调用, saveShadow 持久化</li>
+        <li><strong>Shadow Task</strong> — 存远端 taskId + Member 状态, 供恢复读取</li>
+        <li><strong>Task metadata</strong> — 中断数据存入 Task.status.message.metadata["_interrupt"]</li>
+      </ul>
+    </div>
+
+    <!-- 关键设计 -->
+    <div class="panel-box">
+      <h3>核心设计</h3>
+      <ul>
+        <li><strong>双重中断</strong>: A 层 a2a_delegate (触发远端) + B 层 ask_user (到达用户)</li>
+        <li><strong>中断-恢复循环</strong>: Orchestrator while(true) 循环, 多次中断-恢复</li>
+        <li><strong>reject(resumeInput)</strong>: 远端结果直接回喂 LLM, 不真正执行工具</li>
+        <li><strong>system-prompt</strong>: temperature=0.0 确保确定性行为</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Agent C 餐饮推荐 A2A 全流程</title>
+<style>
+  @page { size: landscape; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    background: #0d1117;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    color: #e6edf3;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    height: 50px; flex-shrink: 0;
+    background: linear-gradient(135deg, #1a2332, #0d1117);
+    border-bottom: 2px solid #30363d;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 30px;
+  }
+  .header h1 { font-size: 22px; color: #f0883e; }
+  .header .sub { font-size: 13px; color: #8b949e; }
+  .content { flex: 1; display: flex; padding: 10px 18px; gap: 10px; overflow: hidden; }
+  .left-panel { width: 860px; display: flex; flex-direction: column; gap: 3px; }
+  .right-panel { width: 370px; display: flex; flex-direction: column; gap: 8px; }
+
+  /* ---- 时间线 ---- */
+  .timeline { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+  .step { display: flex; align-items: stretch; gap: 8px; min-height: 0; }
+  .step-num {
+    width: 26px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: bold; color: #fff;
+    border-radius: 50%;
+  }
+  .step-body {
+    flex: 1; border-radius: 5px; padding: 4px 10px;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11.5px; line-height: 1.4;
+  }
+  .step-body .code { font-family: 'Consolas', monospace; font-size: 10.5px; }
+
+  /* 颜色 */
+  .c-a  { background: #0e2a1e; border-left: 3px solid #3fb950; }
+  .c-a .step-num { background: #3fb950; }
+  .c-b  { background: #1a1a2e; border-left: 3px solid #a371f7; }
+  .c-b .step-num { background: #a371f7; }
+  .c-c  { background: #2e2a0e; border-left: 3px solid #f0883e; }
+  .c-c .step-num { background: #f0883e; }
+  .c-user { background: #2e1a1a; border-left: 3px solid #f85149; }
+  .c-user .step-num { background: #f85149; }
+  .c-sys { background: #1e1a2e; border-left: 3px solid #58a6ff; }
+  .c-sys .step-num { background: #58a6ff; }
+  .c-interrupt { background: #2e2a0e; border-left: 3px solid #d29922; }
+  .c-interrupt .step-num { background: #d29922; }
+
+  /* ---- 右侧面板 ---- */
+  .panel-box {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 8px 12px;
+  }
+  .panel-box h3 { font-size: 12px; color: #f0883e; margin-bottom: 4px; }
+  .panel-box ul { list-style: none; }
+  .panel-box li { font-size: 10.5px; line-height: 1.6; color: #8b949e; }
+  .panel-box li strong { color: #e6edf3; }
+  .tag {
+    display: inline-block; padding: 1px 5px; border-radius: 3px;
+    font-size: 9px; font-weight: bold; margin-left: 2px;
+  }
+
+  /* ---- 架构图 ---- */
+  .arch-box {
+    flex: 1; background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 6px; display: flex; align-items: center; justify-content: center;
+  }
+  .arch-svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Agent C 餐饮推荐 A2A 全流程</h1>
+  <div class="sub">User → Agent A → Agent B (流式/非流式路由) → Agent C → food_recommend 中断 → 确认 → 结果回传 C→B→A</div>
+</div>
+
+<div class="content">
+
+  <!-- ============ 左侧: 时间线 ============ -->
+  <div class="left-panel">
+    <div class="timeline">
+
+      <!-- ===== 第一阶段: 请求转发 ===== -->
+      <div class="step">
+        <div class="c-user step-num">1</div>
+        <div class="c-user step-body">
+          <div><strong style="color:#f85149;">用户</strong> → Agent A:
+            <span class="code" style="color:#d2a8ff;">POST /v1/query {"conversation_id":"food-1","message":"Recommend a dish for our team lunch today","stream":false}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-a step-num">2</div>
+        <div class="c-a step-body">
+          <div><strong style="color:#3fb950;">Agent A</strong> system-prompt: "必须调用 delegate_to_agentb" → LLM tool_call(delegate_to_agentb, {message:"Recommend a dish..."})
+            <br><span style="color:#8b949e;">A2aDelegateRail → interrupt(agentName="agentb", _interrupt_kind="a2a_delegate")</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-sys step-num">3</div>
+        <div class="c-sys step-body">
+          <div><strong style="color:#58a6ff;">Orchestrator (A)</strong> isCoordinatorInterrupt → true (a2a_delegate) → batchCoordinator.execute() → <strong style="color:#58a6ff;">POST :18091/a2a</strong> → Agent B
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-b step-num">4</div>
+        <div class="c-b step-body">
+          <div><strong style="color:#a371f7;">Agent B</strong> 收到 "Recommend a dish..." → system-prompt: "dining 请求调用 delegate_to_agentc_streaming 或 nonstreaming"
+            <br><span style="color:#8b949e;">→ LLM 根据请求内容选择工具: <strong style="color:#f0883e;">delegate_to_agentc_streaming</strong> (默认流式)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 第二阶段: B→C 路由选择 ===== -->
+      <div class="step">
+        <div class="c-b step-num">5</div>
+        <div class="c-b step-body">
+          <div><strong style="color:#a371f7;">BToCDelegateRail</strong> 拦截工具调用:
+            <br><span class="code" style="color:#d2a8ff;">toolCall.name == "delegate_to_agentc_streaming" → agentName = "agentc-streaming"</span>
+            <br><span class="code" style="color:#d2a8ff;">toolCall.name == "delegate_to_agentc_nonstreaming" → agentName = "agentc-nonstreaming"</span>
+            <br><span style="color:#8b949e;">→ interrupt(context:{agentName:"agentc-streaming", _interrupt_kind:"a2a_delegate"})</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-sys step-num">6</div>
+        <div class="c-sys step-body">
+          <div><strong style="color:#58a6ff;">Orchestrator (B)</strong> → isCoordinatorInterrupt → true → batchCoordinator.execute()
+            <br><span style="color:#8b949e;">A2ARemoteAgentClient: registry.get("agentc-streaming") → URL: http://localhost:18092/, streaming=true</span>
+            <br><strong style="color:#58a6ff;">→ POST :18092/a2a (SSE streaming)</strong> → Agent C
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 第三阶段: Agent C 中断 ===== -->
+      <div class="step">
+        <div class="c-c step-num">7</div>
+        <div class="c-c step-body">
+          <div><strong style="color:#f0883e;">Agent C (DeepAgent)</strong> 收到 "Recommend a dish..." → system-prompt: "调用 food_recommend"
+            <br><span style="color:#8b949e;">→ LLM tool_call(food_recommend, {request:"Recommend a dish for our team lunch today"})</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-interrupt step-num">8</div>
+        <div class="c-interrupt step-body">
+          <div><strong style="color:#d29922;">FoodRecommendInterruptRail</strong> resolveInterrupt(resumeInput=null)
+            <br><span class="code" style="color:#d2a8ff;">→ interrupt(message:"Agent C is ready to recommend food for: Recommend a dish... Confirm to continue.",
+              context:{_interrupt_kind:"ask_user"})</span>
+            <br><span style="color:#8b949e;">注: resumeInput ≠ null 时直接执行 reject(recommendation), 不校验内容</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-sys step-num">9</div>
+        <div class="c-sys step-body">
+          <div><strong style="color:#58a6ff;">中断冒泡</strong> Orchestrator (C) → ask_user ≠ a2a_delegate → 透传
+            <br><span style="color:#8b949e;">→ emitter.requiresInput() → Task = INPUT_REQUIRED</span>
+            <br><strong style="color:#58a6ff;">中断回传</strong> C → B (Orchestrator saveShadow) → A (Orchestrator saveShadow) → HTTP 200
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-user step-num">10</div>
+        <div class="c-user step-body">
+          <div><strong style="color:#f85149;">用户</strong> 收到:
+            <span class="code" style="color:#d2a8ff;">"Agent C is ready to recommend food for: Recommend a dish... Confirm to continue."</span>
+            <br>→ 回复 <span class="code" style="color:#3fb950;">"yes"</span> (或任意非 null 内容, FoodRecommendRail 不校验)
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 第四阶段: 恢复与结果回传 ===== -->
+      <div class="step">
+        <div class="c-sys step-num">11</div>
+        <div class="c-sys step-body">
+          <div><strong style="color:#58a6ff;">恢复链</strong> 用户 "yes" → A Orchestrator syncResumePending → resume(A shadow Task)
+            <br><span style="color:#8b949e;">→ A2A callOutcome(taskId=B's, message="yes") → B Orchestrator syncResumePending → resume(B shadow Task)</span>
+            <br><strong style="color:#58a6ff;">→ A2A callOutcome(taskId=C's, message="yes")</strong> → Agent C
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-c step-num">12</div>
+        <div class="c-c step-body">
+          <div><strong style="color:#f0883e;">Agent C</strong> findStoredInterrupt → FoodRecommendInterruptRail.resolveInterrupt(resumeInput="yes")
+            <br><span class="code" style="color:#d2a8ff;">resumeInput ≠ null → reject("Agent C received confirmation: yes; food recommendation:
+              For 'Recommend a dish...', Agent C recommends Kung Pao chicken because it is easy to share.")</span>
+            <br><span style="color:#8b949e;">→ DeepAgent LLM 整理输出 → Task COMPLETED</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-sys step-num">13</div>
+        <div class="c-sys step-body">
+          <div><strong style="color:#58a6ff;">结果回传 C→B→A</strong> C Task COMPLETED → B A2ARemoteAgentClient → B Orchestrator buildBatchResumeRequest
+            <br><span style="color:#8b949e;">→ B A2aDelegateRail(BToC) reject(remoteResult) → B LLM 整理 → B Task COMPLETED → A A2ARemoteAgentClient</span>
+            <br><strong style="color:#58a6ff;">→ A Orchestrator buildBatchResumeRequest</strong> → A A2aDelegateRail reject(remoteResult)
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-a step-num">14</div>
+        <div class="c-a step-body">
+          <div><strong style="color:#3fb950;">Agent A</strong> LLM 收到工具结果 (verbatim, 不改写) → 生成最终回答
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="c-user step-num">15</div>
+        <div class="c-user step-body">
+          <div><strong style="color:#f85149;">用户</strong> 收到: <span class="code" style="color:#3fb950;">"Agent C recommends Kung Pao Chicken for your team lunch today! 🍗 It's a great choice because it's easy to share..."</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ 右侧: 架构图 + 要点 ============ -->
+  <div class="right-panel">
+
+    <!-- 架构图 -->
+    <div class="arch-box" style="height:200px; flex-shrink:0;">
+      <svg class="arch-svg" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- User -->
+        <rect x="8" y="8" width="55" height="26" rx="4" fill="#2e1a1a" stroke="#f85149" stroke-width="1.5"/>
+        <text x="35" y="24" text-anchor="middle" fill="#f85149" font-size="10" font-weight="bold">用户</text>
+
+        <!-- Agent A -->
+        <rect x="100" y="8" width="75" height="26" rx="4" fill="#0e2a1e" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="137" y="24" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Agent A :18090</text>
+
+        <!-- Agent B -->
+        <rect x="210" y="8" width="75" height="26" rx="4" fill="#1a1a2e" stroke="#a371f7" stroke-width="1.5"/>
+        <text x="247" y="24" text-anchor="middle" fill="#a371f7" font-size="10" font-weight="bold">Agent B :18091</text>
+
+        <!-- Agent C -->
+        <rect x="295" y="8" width="48" height="26" rx="4" fill="#2e2a0e" stroke="#f0883e" stroke-width="1.5"/>
+        <text x="319" y="24" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Agent C</text>
+
+        <!-- Rail 标注 -->
+        <rect x="100" y="42" width="75" height="18" rx="3" fill="#2e2a0e" stroke="#d29922" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="137" y="54" text-anchor="middle" fill="#d29922" font-size="7">A2aDelegateRail</text>
+
+        <rect x="210" y="42" width="75" height="18" rx="3" fill="#2e2a0e" stroke="#d29922" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="247" y="54" text-anchor="middle" fill="#d29922" font-size="7">BToCDelegateRail</text>
+
+        <rect x="295" y="42" width="48" height="18" rx="3" fill="#2e2a0e" stroke="#d29922" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="319" y="54" text-anchor="middle" fill="#d29922" font-size="7">FoodRecommend</text>
+
+        <!-- 箭头: User -> A -->
+        <line x1="63" y1="21" x2="95" y2="21" stroke="#f85149" stroke-width="1.5" marker-end="url(#aR)"/>
+        <text x="79" y="16" text-anchor="middle" fill="#8b949e" font-size="7">dining</text>
+
+        <!-- 箭头: A -> B -->
+        <line x1="175" y1="21" x2="205" y2="21" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#aB)"/>
+        <text x="190" y="16" text-anchor="middle" fill="#8b949e" font-size="7">A2A</text>
+
+        <!-- 箭头: B -> C (流式/非流式) -->
+        <line x1="285" y1="21" x2="290" y2="21" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#aB)"/>
+        <text x="288" y="16" text-anchor="middle" fill="#8b949e" font-size="6">stream/nonstream</text>
+
+        <!-- 中断冒泡路径 (虚线, 从C回到User) -->
+        <path d="M 319 60 Q 319 85 137 85 Q 137 95 35 95" fill="none" stroke="#d29922" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#aY)"/>
+        <text x="177" y="80" text-anchor="middle" fill="#d29922" font-size="8">① 中断冒泡 INPUT_REQUIRED (C→B→A→User)</text>
+
+        <!-- 恢复路径 (虚线, 从User到C) -->
+        <path d="M 35 115 Q 137 115 319 115" fill="none" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#aG)"/>
+        <text x="177" y="128" text-anchor="middle" fill="#3fb950" font-size="8">② 恢复 "yes" (User→A→B→C)</text>
+
+        <!-- 结果回传 (实线, 从C回到User) -->
+        <path d="M 319 145 Q 137 145 35 145" fill="none" stroke="#f0883e" stroke-width="2" marker-end="url(#aO)"/>
+        <text x="177" y="158" text-anchor="middle" fill="#f0883e" font-size="8">③ 结果回传 C→B→A→User (Kung Pao Chicken)</text>
+
+        <!-- Shadow Task 标注 -->
+        <rect x="55" y="175" width="120" height="18" rx="3" fill="#1e1a2e" stroke="#58a6ff" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="115" y="187" text-anchor="middle" fill="#58a6ff" font-size="7">Shadow Task (A & B 各存一份)</text>
+
+        <rect x="250" y="175" width="90" height="18" rx="3" fill="#1e1a2e" stroke="#58a6ff" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="295" y="187" text-anchor="middle" fill="#58a6ff" font-size="7">Task metadata</text>
+
+        <defs>
+          <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f85149"/></marker>
+          <marker id="aB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#58a6ff"/></marker>
+          <marker id="aY" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d29922"/></marker>
+          <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3fb950"/></marker>
+          <marker id="aO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f0883e"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- BToC 路由选择 -->
+    <div class="panel-box">
+      <h3>BToCDelegateRail 路由选择</h3>
+      <ul>
+        <li><strong>工具名</strong>: delegate_to_agentc_streaming → agentName = <span class="tag" style="background:#3fb950;color:#fff;">agentc-streaming</span></li>
+        <li><strong>工具名</strong>: delegate_to_agentc_nonstreaming → agentName = <span class="tag" style="background:#a371f7;color:#fff;">agentc-nonstreaming</span></li>
+        <li><strong>注册表查找</strong>: registry.get(agentName) → URL + streaming 标志</li>
+        <li><strong>Agent B yml</strong>: remote-agents 配置了两条路由, 指向同一 Agent C (:18092)</li>
+      </ul>
+    </div>
+
+    <!-- FoodRecommend 设计 -->
+    <div class="panel-box">
+      <h3>FoodRecommendInterruptRail 设计</h3>
+      <ul>
+        <li><strong>中断类型</strong>: <span class="tag" style="background:#d29922;color:#000;">ask_user</span> (直接到达用户)</li>
+        <li><strong>首次</strong>: resumeInput=null → interrupt("Confirm to continue.")</li>
+        <li><strong>恢复</strong>: resumeInput ≠ null → <strong>直接执行</strong> reject(recommendation)</li>
+        <li><strong>不校验</strong>: 任意非 null 回复都执行 (与 CalcInterruptRail 不同)</li>
+        <li><strong>推荐结果</strong>: "For '...', Agent C recommends Kung Pao chicken because it is easy to share."</li>
+      </ul>
+    </div>
+
+    <!-- 三重中断与 Shadow Task -->
+    <div class="panel-box">
+      <h3>三重中断与 Shadow Task</h3>
+      <ul>
+        <li><strong>A 层</strong>: A2aDelegateRail (a2a_delegate) → 远端调用 B</li>
+        <li><strong>B 层</strong>: BToCDelegateRail (a2a_delegate) → 远端调用 C</li>
+        <li><strong>C 层</strong>: FoodRecommendRail (ask_user) → 到达用户</li>
+        <li><strong>Shadow Task A</strong>: 存 B 的 remoteTaskId (Member: agentc-streaming)</li>
+        <li><strong>Shadow Task B</strong>: 存 C 的 remoteTaskId (Member: agentc-streaming)</li>
+        <li><strong>恢复路径</strong>: yes → A.resume → B.resume → C.resume (逐级恢复)</li>
+        <li><strong>结果回传</strong>: C COMPLETED → B reject → A reject → LLM 输出</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
