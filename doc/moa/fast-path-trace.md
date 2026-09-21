@@ -346,7 +346,7 @@ L1RuntimeConfiguration
 
 | 变量 | 值 | 用途 |
 |------|-----|------|
-| `LLM_API_KEY` | `sk-84d285234d1c4908bcf484bf5e23f0fe` | LLM API 密钥 |
+| `LLM_API_KEY` | `sk-xxx` | LLM API 密钥 |
 | `LLM_MODEL` | `glm-5.2` | 模型名称 |
 | `LLM_API_BASE` | `https://dashscope.aliyuncs.com/compatible-mode/v1` | API 端点 |
 
